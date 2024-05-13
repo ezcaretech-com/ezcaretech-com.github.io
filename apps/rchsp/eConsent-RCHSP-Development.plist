@@ -29,13 +29,13 @@
             <key>metadata</key>
             <dict>
                 <key>bundle-identifier</key>
-                <string>com.eConsent.rchsp</string>
+                <string>com.rchsp.eConsentDev</string>
                 <key>bundle-version</key>
-                <string>1.0.0</string>
+                <string>2.0.2</string>
                 <key>kind</key>
                 <string>software</string>
                 <key>title</key>
-                <string>eConsent-RCHSP-Development</string>
+                <string>eConsent-RCHSP</string>
             </dict>
         </dict>
     </array>
