@@ -11,7 +11,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://ezcaretech-com.github.io/apps/ezaria/ezaria_app.ipa</string>
+					<string>https://ezcaretech-com.github.io/apps/ppm_ezaria/ezaria_app.ipa</string>
 				</dict>
 				<dict>
 					<key>kind</key>
@@ -31,7 +31,7 @@
 				<key>bundle-identifier</key>
 				<string>com.ezcaretech.ezaria.ppm.demo</string>
 				<key>bundle-version</key>
-				<string>0.1.0</string>
+				<string>0.3.0</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>platform-identifier</key>
