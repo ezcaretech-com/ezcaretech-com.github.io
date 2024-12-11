@@ -29,7 +29,7 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.ezcaretech.ezaria.himss.demo</string>
+				<string>com.ezcaretech.ezaria.gbc.staging</string>
 				<key>bundle-version</key>
 				<string>0.1.0</string>
 				<key>kind</key>
