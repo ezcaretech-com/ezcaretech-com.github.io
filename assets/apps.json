@@ -3,12 +3,12 @@
   "apps": [
     {
       "id": "ezaria_ezcaretech",
-      "name": "이지아리아 사내서버용",
+      "name": "이지아리아 사내업무용",
       "isUse": true,
       "iconUrl": "./images/ezARIA/app_icon.jpg",
       "indexImageUrl": "./images/ezARIA/app_icon.jpg",
-      "summary": "ezaria app",
-      "description": "ezaria app.",
+      "summary": "ezARIA app",
+      "description": "ezARIA app.",
       "screenshots": [
         {
           "url": "./images/ezARIA/01.png",
@@ -58,7 +58,7 @@
       "histories": [
         {
           "version": "1.0.0",
-          "description": "ezARIA 사내서버 배포",
+          "description": "ezARIA Release",
           "minSdkVersion": "",
           "sdkVersion": "",
           "releaseDate": "2024-12-16",
