@@ -39,7 +39,7 @@
         {
           "platform": "Android",
           "version": "1.0.0",
-          "url": "./files/ezARIA/ez/app-ezstaging-release.apk",
+          "url": "./files/ezARIA/ez/app-ezproduction-release.apk",
           "isUse": false
         },
         {
