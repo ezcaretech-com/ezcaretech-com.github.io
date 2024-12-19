@@ -535,7 +535,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/52c0e09a827b456c18bb9c8edd7cac00.png");
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/logo-default.png");
 
 /***/ }),
 
