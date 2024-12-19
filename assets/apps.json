@@ -51,7 +51,7 @@
         {
           "platform": "Windows",
           "version": "1.0.0",
-          "url": "http://10.1.30.70:10303/UCFILE/update/win32/ezARIA_1.0.0.exe",
+          "url": "http://106.246.252.115:10303/UCFILE/update/win32/ezARIA_1.0.0.exe",
           "isUse": true
         }
       ],
