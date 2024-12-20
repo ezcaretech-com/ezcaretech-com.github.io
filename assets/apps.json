@@ -39,7 +39,7 @@
         {
           "platform": "Android",
           "version": "0.3.1",
-          "url": "itms-services://?action=download-manifest&url=https://ezcaretech-com.github.io/files/ezARIA/ez/app-ezproduction-release.apk",
+          "url": "https://ezcaretech-com.github.io/files/ezARIA/ez/app-ezproduction-release.apk",
           "isUse": true
         },
         {
