@@ -40,13 +40,13 @@
           "platform": "Android",
           "version": "0.3.1+2",
           "url": "./files/ezARIA/ez/app-ezproduction-release.apk",
-          "isUse": false
+          "isUse": true
         },
         {
           "platform": "IOS",
           "version": "0.3.1+2",
           "url": "itms-services://?action=download-manifest&url=https://ezcaretech-com.github.io/files/ezARIA/ez/manifest.plist",
-          "isUse": false
+          "isUse": true
         },
         {
           "platform": "Windows",
@@ -62,6 +62,105 @@
           "minSdkVersion": "",
           "sdkVersion": "",
           "releaseDate": "2024-12-16",
+          "installUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "ezconsent_rcjy_dev",
+      "name": "eConsent for Royal Commission (for DEVELOPMENT)",
+      "isUse": true,
+      "iconUrl": "./apps/ezconsent/ezconsent-rchsp.png",
+      "indexImageUrl": "./apps/ezconsent/ezconsent-rchsp.png",
+      "summary": "Provided by Royal Commission For Jubail And Yanbu",
+      "description": "e-Consent system provides convenient functions for signing consents using desktop computers or tablet computers.\nVarious medical forms are displayed electronically and signature data are saved in electronic data as well.\nThis will reduce time in searching and getting medical forms, as well as increasing work efficiency.",
+      "screenshots": [
+        {
+          "url": "./apps/ezconsent/screenshot_0006.png",
+          "alt": "01"
+        }
+      ],
+      "downloads": [
+        {
+          "platform": "IOS",
+          "version": "2.0.2",
+          "url": "itms-services://?action=download-manifest&url=https://ezcaretech-com.github.io/apps/rchsp/eConsent-RCHSP-Development.plist",
+          "isUse": true
+        }
+      ],
+      "histories": [
+        {
+          "version": "2.0.2",
+          "description": "Release",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2024-05-07",
+          "installUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "ezconsent_rcjy_stg",
+      "name": "eConsent for Royal Commission (for STAGING)",
+      "isUse": true,
+      "iconUrl": "./apps/ezconsent/ezconsent-rchsp.png",
+      "indexImageUrl": "./apps/ezconsent/ezconsent-rchsp.png",
+      "summary": "Provided by Royal Commission For Jubail And Yanbu",
+      "description": "e-Consent system provides convenient functions for signing consents using desktop computers or tablet computers.\nVarious medical forms are displayed electronically and signature data are saved in electronic data as well.\nThis will reduce time in searching and getting medical forms, as well as increasing work efficiency.",
+      "screenshots": [
+        {
+          "url": "./apps/ezconsent/screenshot_0006.png",
+          "alt": "01"
+        }
+      ],
+      "downloads": [
+        {
+          "platform": "IOS",
+          "version": "2.0.2",
+          "url": "itms-services://?action=download-manifest&url=https://ezcaretech-com.github.io/apps/rchsp/eConsent-RCHSP-Staging.plist",
+          "isUse": true
+        }
+      ],
+      "histories": [
+        {
+          "version": "2.0.2",
+          "description": "Release",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2024-05-07",
+          "installUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "ezconsent_rcjy_prod",
+      "name": "eConsent for Royal Commission (for PRODUCTION)",
+      "isUse": true,
+      "iconUrl": "./apps/ezconsent/ezconsent-rchsp.png",
+      "indexImageUrl": "./apps/ezconsent/ezconsent-rchsp.png",
+      "summary": "Provided by Royal Commission For Jubail And Yanbu",
+      "description": "e-Consent system provides convenient functions for signing consents using desktop computers or tablet computers.\nVarious medical forms are displayed electronically and signature data are saved in electronic data as well.\nThis will reduce time in searching and getting medical forms, as well as increasing work efficiency.",
+      "screenshots": [
+        {
+          "url": "./apps/ezconsent/screenshot_0006.png",
+          "alt": "01"
+        }
+      ],
+      "downloads": [
+        {
+          "platform": "IOS",
+          "version": "2.0.2",
+          "url": "itms-services://?action=download-manifest&url=https://ezcaretech-com.github.io/apps/rchsp/eConsent-RCHSP-Production.plist",
+          "isUse": true
+        }
+      ],
+      "histories": [
+        {
+          "version": "2.0.2",
+          "description": "Release",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2024-05-07",
           "installUrl": ""
         }
       ]
