@@ -208,7 +208,7 @@
           "version": "0.0.1",
           "url": "itms-services://?action=download-manifest&url=https://ezcaretech-com.github.io/files/ezPHR/gbc/manifest.plist",
           "isUse": true
-        },
+        }
       ],
       "histories": [
         {
