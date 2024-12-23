@@ -1,4 +1,4 @@
-﻿{
+{
   "environment": "PROD",
   "apps": [
     {
@@ -169,6 +169,54 @@
           "minSdkVersion": "",
           "sdkVersion": "",
           "releaseDate": "2024-05-07",
+          "installUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "ezphr_gbc",
+      "name": "Patient Portal for GBC",
+      "isUse": true,
+      "iconUrl": "./apps/ezphr/patient_portal.png",
+      "indexImageUrl": "./apps/ezphr/patient_portal.png",
+      "summary": "Patient Portal for GBC",
+      "description": "Patient Portal for GBC",
+      "screenshots": [
+        {
+          "url": "./apps/ezphr/01.png",
+          "alt": "01"
+        },{
+          "url": "./apps/ezphr/02.png",
+          "alt": "02"
+        },{
+          "url": "./apps/ezphr/03.png",
+          "alt": "03"
+        },{
+          "url": "./apps/ezphr/04.png",
+          "alt": "04"
+        }
+      ],
+      "downloads": [
+        {
+          "platform": "Android",
+          "version": "0.0.1",
+          "url": "https://ezcaretech-com.github.io/files/ezPHR/gbc/app-gbcproduction-release.apk",
+          "isUse": true
+        },
+        {
+          "platform": "IOS",
+          "version": "0.0.1",
+          "url": "itms-services://?action=download-manifest&url=https://ezcaretech-com.github.io/files/ezPHR/gbc/manifest.plist",
+          "isUse": true
+        },
+      ],
+      "histories": [
+        {
+          "version": "0.0.1",
+          "description": "Release",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2024-12-23",
           "installUrl": ""
         }
       ]
