@@ -131,12 +131,20 @@
       "downloads": [
         {
           "platform": "IOS",
-          "version": "2.0.2",
+          "version": "2.0.3",
           "url": "itms-services://?action=download-manifest&url=https://ezcaretech-com.github.io/apps/rchsp/eConsent-RCHSP-Development.plist",
           "isUse": true
         }
       ],
       "histories": [
+        {
+          "version": "2.0.3",
+          "description": "Fix Consent Capture",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2025-01-21",
+          "installUrl": ""
+        },
         {
           "version": "2.0.2",
           "description": "Release",
@@ -164,12 +172,20 @@
       "downloads": [
         {
           "platform": "IOS",
-          "version": "2.0.2",
+          "version": "2.0.3",
           "url": "itms-services://?action=download-manifest&url=https://ezcaretech-com.github.io/apps/rchsp/eConsent-RCHSP-Staging.plist",
           "isUse": true
         }
       ],
       "histories": [
+        {
+          "version": "2.0.3",
+          "description": "Release",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2025-01-21",
+          "installUrl": ""
+        },
         {
           "version": "2.0.2",
           "description": "Release",
