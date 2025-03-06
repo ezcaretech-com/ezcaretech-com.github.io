@@ -38,13 +38,13 @@
       "downloads": [
         {
           "platform": "Android",
-          "version": "0.3.22",
+          "version": "0.3.23",
           "url": "https://ezcaretech-com.github.io/files/ezARIA/ez/app-ezproduction-release.apk",
           "isUse": true
         },
         {
           "platform": "IOS",
-          "version": "0.3.22",
+          "version": "0.3.23",
           "url": "itms-services://?action=download-manifest&url=https://ezcaretech-com.github.io/files/ezARIA/ez/manifest.plist",
           "isUse": true
         },
@@ -56,6 +56,14 @@
         }
       ],
       "histories": [
+        {
+          "version": "0.3.23",
+          "description": "오류 수정 및 성능 개선.",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2025-03-06",
+          "installUrl": ""
+        },
         {
           "version": "0.3.22",
           "description": "오류 수정 및 성능 개선.",
