@@ -50,8 +50,8 @@
         },
         {
           "platform": "Windows",
-          "version": "1.0.7",
-          "url": "./files/ezARIA/ez/ezARIA_1.0.7.exe",
+          "version": "1.0.8",
+          "url": "./files/ezARIA/ez/ezARIA_1.0.8.exe",
           "isUse": true
         }
       ],
