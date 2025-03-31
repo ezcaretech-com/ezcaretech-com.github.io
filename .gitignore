@@ -1,1 +1,12 @@
 .DS_Store
+scripts/config.json
+
+scripts/config_key.json
+
+scripts/config_encrypted.json
+
+scripts/generate_key.py
+
+scripts/encrypt_config.py
+
+scripts/decrypt_config.py
