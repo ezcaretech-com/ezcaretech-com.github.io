@@ -40,13 +40,13 @@
           "platform": "Android",
           "version": "0.3.27",
           "url": "https://ezcaretech-com.github.io/files/ezARIA/ez/app-ezproduction-release.apk",
-          "isUse": true
+          "isUse": false
         },
         {
           "platform": "IOS",
           "version": "0.3.27",
           "url": "itms-services://?action=download-manifest&url=https://ezcaretech-com.github.io/files/ezARIA/ez/manifest.plist",
-          "isUse": true
+          "isUse": false
         },
         {
           "platform": "Windows",
