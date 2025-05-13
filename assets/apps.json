@@ -303,6 +303,14 @@
       ],
       "histories": [
         {
+          "version": "2.0.7",
+          "description": "Fix Consent Capture Error",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2025-05-13",
+          "installUrl": ""
+        },
+        {
           "version": "2.0.6",
           "description": "Fix Consent Capture Error",
           "minSdkVersion": "",
