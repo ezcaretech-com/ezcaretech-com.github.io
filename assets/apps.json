@@ -451,6 +451,14 @@
       ],
       "histories": [
         {
+          "version": "0.0.4",
+          "description": "오류 수정 및 성능 개선.",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2025-06-04",
+          "installUrl": ""
+        },
+        {
           "version": "0.0.3",
           "description": "오류 수정 및 성능 개선. 시연 환경 대응.",
           "minSdkVersion": "",
