@@ -438,13 +438,13 @@
       "downloads": [
         {
           "platform": "Android",
-          "version": "0.0.2",
+          "version": "0.0.4",
           "url": "https://ezcaretech-com.github.io/files/ezPHR/gbc/app-gbcstaging-release.apk",
           "isUse": true
         },
         {
           "platform": "IOS",
-          "version": "0.0.2",
+          "version": "0.0.4",
           "url": "itms-services://?action=download-manifest&url=https://ezcaretech-com.github.io/files/ezPHR/gbc/manifest.plist",
           "isUse": true
         }
