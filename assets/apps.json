@@ -3,25 +3,13 @@
   "apps": [
     {
       "id": "ezaria_ezcaretech",
-      "name": "이지아리아 사내업무용",
+      "name": "ezARIA",
       "isUse": true,
       "iconUrl": "./images/ezARIA/app_icon.jpg",
       "indexImageUrl": "./images/ezARIA/app_icon.jpg",
       "summary": "ezARIA app",
       "description": "ezARIA app.",
       "screenshots": [
-        {
-          "url": "./images/ezARIA/01.png",
-          "alt": "01"
-        },
-        {
-          "url": "./images/ezARIA/02.png",
-          "alt": "02"
-        },
-        {
-          "url": "./images/ezARIA/03.png",
-          "alt": "03"
-        },
         {
           "url": "./images/ezARIA/pc/1.png",
           "alt": "04"
