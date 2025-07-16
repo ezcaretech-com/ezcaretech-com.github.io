@@ -381,7 +381,7 @@
       "histories": [
         {
           "version": "2.0.9",
-          "description": "Added server connectivity check logic.",
+          "description": "1. Fix Consent Capture Error\n2. Added server health check logic.",
           "minSdkVersion": "",
           "sdkVersion": "",
           "releaseDate": "2025-07-16",
