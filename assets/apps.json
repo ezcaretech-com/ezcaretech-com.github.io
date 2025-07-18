@@ -442,18 +442,26 @@
       "downloads": [
         {
           "platform": "Android",
-          "version": "0.0.6",
+          "version": "0.0.7",
           "url": "https://ezcaretech-com.github.io/files/ezPHR/gbc/app-gbcstaging-release.apk",
           "isUse": true
         },
         {
           "platform": "IOS",
-          "version": "0.0.6",
+          "version": "0.0.7",
           "url": "itms-services://?action=download-manifest&url=https://ezcaretech-com.github.io/files/ezPHR/gbc/manifest.plist",
           "isUse": true
         }
       ],
       "histories": [
+        {
+          "version": "0.0.7",
+          "description": "오류 수정 및 성능 개선.",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2025-07-18",
+          "installUrl": ""
+        },
         {
           "version": "0.0.6",
           "description": "오류 수정 및 성능 개선.",
