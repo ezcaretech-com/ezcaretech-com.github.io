@@ -1,9 +1,9 @@
 [
   {
     "appName": "ezARIA",
-    "latestBuildNumber": "74",
+    "latestBuildNumber": "75",
     "packageName": "com.ezcaretech.ezaria.store",
-    "latestVersion": "1.1.2",
+    "latestVersion": "1.1.3",
     "updateMessage": "",
     "androidInstallFileUrl": "https://play.google.com/store/apps/details?id=com.ezcaretech.ezaria.store",
     "windowsInstallFileUrl": "https://raw.githubusercontent.com/ezcaretech-com/ezcaretech-com.github.io/main/files/ezARIA/ez/ezaria_flutter_v_1_1_3.exe",
