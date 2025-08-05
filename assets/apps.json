@@ -519,6 +519,51 @@
           "installUrl": ""
         }
       ]
+    },
+    {
+      "id": "ezphr_cmc",
+      "name": "Patient Portal for CMC",
+      "isUse": true,
+      "iconUrl": "./apps/ezphr/patient_portal.png",
+      "indexImageUrl": "./apps/ezphr/patient_portal.png",
+      "summary": "Patient Portal for CMC",
+      "description": "환자포탈 CMC 운영배포",
+      "screenshots": [
+        {
+          "url": "./apps/ezphr/01.png",
+          "alt": "01"
+        },
+        {
+          "url": "./apps/ezphr/02.png",
+          "alt": "02"
+        },
+        {
+          "url": "./apps/ezphr/03.png",
+          "alt": "03"
+        },
+        {
+          "url": "./apps/ezphr/04.png",
+          "alt": "04"
+        }
+      ],
+      "downloads": [
+        {
+          "platform": "Windows",
+          "version": "0.0.7",
+          "url": "https://ezcaretech-com.github.io/files/ezPHR/cmc/ezPHR.RestApiServer.zip",
+          "isUse": true
+        }
+      ],
+      "histories": [
+        {
+          "version": "0.0.1",
+          "description": "최초배포",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2025-08-05",
+          "installUrl": ""
+        }
+      ]
     }
   ]
 }
