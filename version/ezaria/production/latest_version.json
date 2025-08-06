@@ -1,14 +1,14 @@
 [
   {
     "appName": "ezARIA",
-    "latestBuildNumber": "75",
+    "latestBuildNumber": "77",
     "packageName": "com.ezcaretech.ezaria.store",
-    "latestVersion": "1.1.3",
+    "latestVersion": "1.1.4",
     "updateMessage": "",
     "androidInstallFileUrl": "https://play.google.com/store/apps/details?id=com.ezcaretech.ezaria.store",
     "windowsInstallFileUrl": "https://raw.githubusercontent.com/ezcaretech-com/ezcaretech-com.github.io/main/files/ezARIA/ez/f_prd/ezARIA_v_1_1_4.exe",
     "iosInstallFileUrl": "https://apps.apple.com/kr/app/ezaria/id6743425006",
     "macInstallFileUrl": "https://apps.apple.com/kr/app/ezaria/id6743425006",
-    "forceUpdate": "1.1.2"
+    "forceUpdate": "1.1.4"
   }
 ]
