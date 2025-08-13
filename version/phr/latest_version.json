@@ -1,12 +1,12 @@
 [
   {
     "appName": "PHR",
-    "latestBuildNumber": "13",
+    "latestBuildNumber": "14",
     "packageName": "",
-    "latestVersion": "0.0.10",
+    "latestVersion": "0.0.11",
     "updateMessage": "",
     "androidInstallFileUrl": "",
     "iosInstallFileUrl": "",
-    "forceUpdate": "0.0.10"
+    "forceUpdate": "0.0.11"
   }
 ]
