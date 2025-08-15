@@ -1,9 +1,9 @@
 [
   {
     "appName": "ezARIA",
-    "latestBuildNumber": "78",
+    "latestBuildNumber": "83",
     "packageName": "com.ezcaretech.ezaria.store",
-    "latestVersion": "1.1.5",
+    "latestVersion": "1.1.6",
     "updateMessage": "",
     "androidInstallFileUrl": "https://play.google.com/store/apps/details?id=com.ezcaretech.ezaria.store",
     "windowsInstallFileUrl": "https://raw.githubusercontent.com/ezcaretech-com/ezcaretech-com.github.io/main/files/ezARIA/ez/f_prd/ezARIA.exe",
