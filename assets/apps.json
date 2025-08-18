@@ -463,6 +463,14 @@
       ],
       "histories": [
         {
+          "version": "0.0.13",
+          "description": "오류 수정 및 성능 개선.",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2025-08-18",
+          "installUrl": ""
+        },
+        {
           "version": "0.0.12",
           "description": "오류 수정 및 성능 개선.",
           "minSdkVersion": "",
