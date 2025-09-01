@@ -585,6 +585,57 @@
       ]
     },
     {
+      "id": "ezphr_gbc_prod",
+      "name": "Patient Portal for GBC Production",
+      "isUse": true,
+      "iconUrl": "./apps/ezphr/patient_portal.png",
+      "indexImageUrl": "./apps/ezphr/patient_portal.png",
+      "summary": "Patient Portal for GBC Production",
+      "description": "Patient Portal for GBC Production",
+      "screenshots": [
+        {
+          "url": "./apps/ezphr/01.png",
+          "alt": "01"
+        },
+        {
+          "url": "./apps/ezphr/02.png",
+          "alt": "02"
+        },
+        {
+          "url": "./apps/ezphr/03.png",
+          "alt": "03"
+        },
+        {
+          "url": "./apps/ezphr/04.png",
+          "alt": "04"
+        }
+      ],
+      "downloads": [
+        {
+          "platform": "Android",
+          "version": "0.1.0",
+          "url": "https://aria.ezcaretech.com/files/ezPHR/gbc/app-gbcProduction-release.apk",
+          "isUse": true
+        },
+        {
+          "platform": "IOS",
+          "version": "0.1.0",
+          "url": "itms-services://?action=download-manifest&url=https://ezcaretech-com.github.io/files/ezPHR/gbc/manifest.plist",
+          "isUse": true
+        }
+      ],
+      "histories": [
+        {
+          "version": "0.1.0",
+          "description": "오류 수정 및 성능 개선.",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2025-09-01",
+          "installUrl": ""
+        }
+      ]
+    },
+    {
       "id": "ezphr_cmc",
       "name": "Patient Portal for CMC",
       "isUse": true,
