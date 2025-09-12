@@ -613,18 +613,26 @@
       "downloads": [
         {
           "platform": "Android",
-          "version": "0.1.4",
-          "url": "https://aria.ezcaretech.com/files/ezPHR/gbc/app-gbcproduction-release.apk",
+          "version": "0.1.5",
+          "url": "https://ezcaretech-com.github.io/files/ezPHR/gbc_prod/app-gbcproduction-release.apk",
           "isUse": true
         },
         {
           "platform": "IOS",
-          "version": "0.1.4",
+          "version": "0.1.5",
           "url": "itms-services://?action=download-manifest&url=https://ezcaretech-com.github.io/files/ezPHR/gbc_prod/manifest.plist",
           "isUse": true
         }
       ],
       "histories": [
+        {
+          "version": "0.1.5",
+          "description": "오류 수정 및 성능 개선.",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2025-09-12",
+          "installUrl": ""
+        },
         {
           "version": "0.1.4",
           "description": "오류 수정 및 성능 개선.",
