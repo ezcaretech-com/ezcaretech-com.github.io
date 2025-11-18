@@ -434,6 +434,14 @@
       "histories": [
         {
           "version": "1.0.0",
+          "description": "오류 수정 및 성능 개선.(빌드번호 42)",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2025-11-18",
+          "installUrl": ""
+        },
+        {
+          "version": "1.0.0",
           "description": "오류 수정 및 성능 개선.",
           "minSdkVersion": "",
           "sdkVersion": "",
