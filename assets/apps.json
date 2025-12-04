@@ -515,6 +515,57 @@
       ]
     },
     {
+      "id": "ezphr_cmc_dev",
+      "name": "Patient Portal for CMC Development",
+      "isUse": true,
+      "iconUrl": "./apps/ezphr/patient_portal.png",
+      "indexImageUrl": "./apps/ezphr/patient_portal.png",
+      "summary": "Patient Portal for CMC Development",
+      "description": "환자포탈 CMC 개발기 배포",
+      "screenshots": [
+        {
+          "url": "./apps/ezphr/01.png",
+          "alt": "01"
+        },
+        {
+          "url": "./apps/ezphr/02.png",
+          "alt": "02"
+        },
+        {
+          "url": "./apps/ezphr/03.png",
+          "alt": "03"
+        },
+        {
+          "url": "./apps/ezphr/04.png",
+          "alt": "04"
+        }
+      ],
+      "downloads": [
+        {
+          "platform": "Android",
+          "version": "1.0.0",
+          "url": "https://ezcaretech-com.github.io/files/ezPHR/gbc_prod/app-cmcdubaidevelopment-release.apk",
+          "isUse": true
+        },
+        {
+          "platform": "IOS",
+          "version": "1.0.0",
+          "url": "itms-services://?action=download-manifest&url=https://ezcaretech-com.github.io/files/ezPHR/cmc_dev/manifest.plist",
+          "isUse": true
+        }
+      ],
+      "histories": [
+        {
+          "version": "1.0.0",
+          "description": "오류 수정 및 성능 개선.(빌드번호 43)",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2025-12-04",
+          "installUrl": ""
+        }
+      ]
+    },
+    {
       "id": "ezphr_cmc",
       "name": "Patient Portal for CMC",
       "isUse": true,
