@@ -566,6 +566,57 @@
       ]
     },
     {
+      "id": "ezphr_cmc_stg",
+      "name": "Patient Portal for CMC Staging",
+      "isUse": true,
+      "iconUrl": "./apps/ezphr/patient_portal.png",
+      "indexImageUrl": "./apps/ezphr/patient_portal.png",
+      "summary": "Patient Portal for CMC Staging",
+      "description": "환자포탈 CMC 스테이징 배포",
+      "screenshots": [
+        {
+          "url": "./apps/ezphr/01.png",
+          "alt": "01"
+        },
+        {
+          "url": "./apps/ezphr/02.png",
+          "alt": "02"
+        },
+        {
+          "url": "./apps/ezphr/03.png",
+          "alt": "03"
+        },
+        {
+          "url": "./apps/ezphr/04.png",
+          "alt": "04"
+        }
+      ],
+      "downloads": [
+        {
+          "platform": "Android",
+          "version": "1.0.0",
+          "url": "https://ezcaretech-com.github.io/files/ezPHR/cmc_stg/app-cmcdubaistaging-release.apk",
+          "isUse": true
+        },
+        {
+          "platform": "IOS",
+          "version": "1.0.0",
+          "url": "itms-services://?action=download-manifest&url=https://ezcaretech-com.github.io/files/ezPHR/cmc_stg/manifest.plist",
+          "isUse": true
+        }
+      ],
+      "histories": [
+        {
+          "version": "1.0.0",
+          "description": "오류 수정 및 성능 개선.(빌드번호 44)",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2025-12-05",
+          "installUrl": ""
+        }
+      ]
+    },
+    {
       "id": "ezphr_cmc",
       "name": "Patient Portal for CMC",
       "isUse": true,
