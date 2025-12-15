@@ -577,10 +577,10 @@
       "id": "ezphr_cmc_stg",
       "name": "Patient Portal for CMC Staging",
       "isUse": true,
-      "iconUrl": "./apps/ezphr/patient_portal.png",
-      "indexImageUrl": "./apps/ezphr/patient_portal.png",
+      "iconUrl": "./apps/ezphr/patient_portal_mbc_cmc.png",
+      "indexImageUrl": "./apps/ezphr/patient_portal_mbc_cmc.png",
       "summary": "Patient Portal for CMC Staging",
-      "description": "환자포탈 CMC 스테이징 배포",
+      "description": "Patient Portal CMC-Dubai staging environment deployed.",
       "screenshots": [
         {
           "url": "./apps/ezphr/01.png",
@@ -616,7 +616,7 @@
       "histories": [
         {
           "version": "1.0.0",
-          "description": "오류 수정 및 성능 개선.(빌드번호 47)",
+          "description": "Bug fixes and performance improvements (Build 47)",
           "minSdkVersion": "",
           "sdkVersion": "",
           "releaseDate": "2025-12-15",
@@ -624,7 +624,7 @@
         },
         {
           "version": "1.0.0",
-          "description": "오류 수정 및 성능 개선.(빌드번호 46)",
+          "description": "Bug fixes and performance improvements (Build 46)",
           "minSdkVersion": "",
           "sdkVersion": "",
           "releaseDate": "2025-12-12",
@@ -632,7 +632,7 @@
         },
         {
           "version": "1.0.0",
-          "description": "오류 수정 및 성능 개선.(빌드번호 45)",
+          "description": "Bug fixes and performance improvements (Build 45)",
           "minSdkVersion": "",
           "sdkVersion": "",
           "releaseDate": "2025-12-10",
@@ -640,7 +640,7 @@
         },
         {
           "version": "1.0.0",
-          "description": "오류 수정 및 성능 개선.(빌드번호 44)",
+          "description": "Bug fixes and performance improvements (Build 44)",
           "minSdkVersion": "",
           "sdkVersion": "",
           "releaseDate": "2025-12-05",
