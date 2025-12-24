@@ -2,6 +2,71 @@
   "environment": "PROD",
   "apps": [
     {
+      "id": "ezconsent_rcjy_demo",
+      "name": "eConsent DEMO",
+      "isUse": true,
+      "iconUrl": "./apps/ezconsent/ezconsent-rchsp.png",
+      "indexImageUrl": "./apps/ezconsent/ezconsent-rchsp.png",
+      "summary": "Provided by Royal Commission For Jubail And Yanbu",
+      "description": "e-Consent system provides convenient functions for signing consents using desktop computers or tablet computers.\nVarious medical forms are displayed electronically and signature data are saved in electronic data as well.\nThis will reduce time in searching and getting medical forms, as well as increasing work efficiency.",
+      "screenshots": [
+        {
+          "url": "./apps/ezconsent/screenshot_0006.png",
+          "alt": "01"
+        }
+      ],
+      "downloads": [
+        {
+          "platform": "IOS",
+          "version": "2.0.15",
+          "url": "itms-services://?action=download-manifest&url=https://ezcaretech-com.github.io/apps/rchsp/eConsent-RCHSP-Demo.plist",
+          "isUse": true
+        }
+      ],
+      "histories": [
+        {
+          "version": "2.0.15",
+          "description": "DEMO Release",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2025-12-24",
+          "installUrl": ""
+        },
+        {
+          "version": "2.0.5",
+          "description": "Stability improvement tasks for the app",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2025-04-22",
+          "installUrl": ""
+        },
+        {
+          "version": "2.0.4",
+          "description": "Fix Error : Can't See Sign Image",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2025-02-05",
+          "installUrl": ""
+        },
+        {
+          "version": "2.0.3",
+          "description": "Fix Consent Capture",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2025-01-21",
+          "installUrl": ""
+        },
+        {
+          "version": "2.0.2",
+          "description": "Release",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2024-05-07",
+          "installUrl": ""
+        }
+      ]
+    },
+    {
       "id": "ezconsent_rcjy_dev",
       "name": "eConsent for Royal Commission (for DEVELOPMENT)",
       "isUse": true,
