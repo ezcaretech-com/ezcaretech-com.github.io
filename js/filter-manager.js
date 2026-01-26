@@ -36,13 +36,17 @@
     /**
      * 앱 이름에서 환경 추출
      */
-    extractEnvironment: function(app) {
-      var name = app.name || '';
-      if (name.includes('Development')) return 'Development';
-      if (name.includes('Staging')) return 'Staging';
-      if (name.includes('Production') || (!name.includes('Development') && !name.includes('Staging'))) return 'Production';
-      return 'Unknown';
-    },
+   extractEnvironment: function(app) {
+  var name = (app.name || '').toLowerCase();  // 소문자로 변환!
+  var id = (app.id || '').toLowerCase();
+  
+  if (name.includes('development') || id.includes('_dev')) return 'Development';
+  if (name.includes('staging') || id.includes('_stg')) return 'Staging';
+  if (name.includes('production') || id.includes('_prod')) return 'Production';
+  
+  // 기본값: Production
+  return 'Production';
+},
 
     /**
      * 플랫폼 추출

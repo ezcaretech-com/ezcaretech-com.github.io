@@ -75,81 +75,126 @@ createDownloadSection: function(downloads) {
       return html;
     },
 
-   createDesktopDownloads: function(downloads) {
-  var html = '<div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden w-full">';
-      // 테이블 헤더
-      html += '<table class="w-full">';
-      html += '<thead class="bg-slate-50 border-b border-slate-200">';
-      html += '<tr>';
-      html += '<th class="px-6 py-4 text-left text-sm font-semibold text-slate-600">Platform</th>';
-      html += '<th class="px-6 py-4 text-left text-sm font-semibold text-slate-600">Version</th>';
-      html += '<th class="px-6 py-4 text-right text-sm font-semibold text-slate-600">Download</th>';
-      html += '</tr>';
-      html += '</thead>';
-      html += '<tbody class="divide-y divide-slate-100">';
+createDesktopDownloads: function(downloads) {
+  var html = '<div class="w-full">';
+  
+  // 모바일: 카드 형식 / 데스크탑: 테이블 형식
+  
+  // ===== 모바일 버전 (카드) =====
+  html += '<div class="block md:hidden space-y-3">';
+  
+  var platforms = ['IOS', 'ANDROID', 'WINDOWS'];
+  var PLATFORM_NAMES = { 'IOS': 'iOS', 'ANDROID': 'Android', 'WINDOWS': 'Windows' };
+  var PLATFORM_ICONS = { 'IOS': '🍎', 'ANDROID': '🤖', 'WINDOWS': '🪟' };
+  
+  platforms.forEach(function(platform) {
+    var download = downloads.find(function(d) {
+      return d.platform.toUpperCase() === platform && d.isUse;
+    });
+    
+    if (download) {
+      var platformName = PLATFORM_NAMES[platform] || platform;
+      var icon = PLATFORM_ICONS[platform] || '📱';
       
-      var platforms = ['IOS', 'ANDROID', 'WINDOWS'];
-      
-      platforms.forEach(function(platform) {
-        var download = downloads.find(function(d) {
-          return d.platform.toUpperCase() === platform && d.isUse;
-        });
-
-        var platformName = PLATFORM_NAMES[platform] || platform;
-        var icon = PLATFORM_ICONS[platform] || '📱';
-        
-        html += '<tr class="hover:bg-slate-50 transition-colors">';
-        
-        // 플랫폼
-        html += '<td class="px-6 py-4">';
-        html += '<div class="flex items-center gap-3">';
-        html += '<span class="text-2xl">' + icon + '</span>';
-        html += '<span class="font-medium text-slate-700">' + platformName + '</span>';
-        html += '</div>';
-        html += '</td>';
-        
-        if (download) {
-          // 버전
-          html += '<td class="px-6 py-4">';
-          html += '<span class="text-slate-500">v' + (download.version || 'N/A') + '</span>';
-          html += '</td>';
-          
-          // 다운로드 버튼
-          html += '<td class="px-6 py-4">';
-          html += '<div class="flex items-center justify-end gap-3">';
-          html += '<a href="' + download.url + '" class="inline-flex items-center px-4 py-2 bg-[#0393D6] text-white text-sm font-medium rounded-lg hover:bg-[#0282be] transition-colors">';
-          html += '다운로드';
-          html += '</a>';
-          
-          // QR 코드 버튼 (iOS, Android만)
-          if (platform === 'IOS' || platform === 'ANDROID') {
-            html += '<button class="qr-code-btn inline-flex items-center px-4 py-2 bg-white border border-slate-300 text-slate-600 text-sm font-medium rounded-lg hover:bg-slate-50 hover:border-slate-400 transition-colors" data-url="' + download.url + '" data-platform="' + platformName + '">';
-            html += '<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">';
-            html += '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"></path>';
-            html += '</svg>';
-            html += 'QR';
-            html += '</button>';
-          }
-          
-          html += '</div>';
-          html += '</td>';
-        } else {
-          // Not Available
-          html += '<td class="px-6 py-4"><span class="text-slate-400">-</span></td>';
-          html += '<td class="px-6 py-4 text-right">';
-          html += '<span class="inline-flex items-center px-3 py-1 bg-slate-100 text-slate-400 text-sm rounded-full">Not Available</span>';
-          html += '</td>';
-        }
-        
-        html += '</tr>';
-      });
-      
-      html += '</tbody>';
-      html += '</table>';
+      html += '<div class="flex items-center justify-between p-4 bg-slate-50 rounded-xl">';
+      html += '<div class="flex items-center gap-3">';
+      html += '<span class="text-2xl">' + icon + '</span>';
+      html += '<div>';
+      html += '<p class="font-semibold text-slate-800">' + platformName + '</p>';
+      html += '<p class="text-xs text-slate-500">v' + (download.version || 'N/A') + '</p>';
       html += '</div>';
+      html += '</div>';
+      html += '<div class="flex items-center gap-2">';
 
-      return html;
-    },
+      
+      // 다운로드 버튼 (아이콘만)
+      html += '<a href="' + download.url + '" class="p-2 bg-[#0393D6] text-white rounded-lg hover:bg-[#0282be] transition-colors" title="다운로드">';
+      html += '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">';
+      html += '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>';
+      html += '</svg>';
+      html += '</a>';
+      
+      html += '</div>';
+      html += '</div>';
+    }
+  });
+  
+  html += '</div>';
+  
+  // ===== 데스크탑 버전 (테이블) =====
+  html += '<div class="hidden md:block overflow-hidden rounded-xl border border-slate-200">';
+  html += '<table class="w-full">';
+  html += '<thead class="bg-slate-50 border-b border-slate-200">';
+  html += '<tr>';
+  html += '<th class="px-6 py-4 text-left text-sm font-semibold text-slate-600">Platform</th>';
+  html += '<th class="px-6 py-4 text-left text-sm font-semibold text-slate-600">Version</th>';
+  html += '<th class="px-6 py-4 text-right text-sm font-semibold text-slate-600">Download</th>';
+  html += '</tr>';
+  html += '</thead>';
+  html += '<tbody class="divide-y divide-slate-100">';
+  
+  platforms.forEach(function(platform) {
+    var download = downloads.find(function(d) {
+      return d.platform.toUpperCase() === platform && d.isUse;
+    });
+
+    var platformName = PLATFORM_NAMES[platform] || platform;
+    var icon = PLATFORM_ICONS[platform] || '📱';
+    
+    html += '<tr class="hover:bg-slate-50 transition-colors">';
+    
+    // 플랫폼
+    html += '<td class="px-6 py-4">';
+    html += '<div class="flex items-center gap-3">';
+    html += '<span class="text-2xl">' + icon + '</span>';
+    html += '<span class="font-medium text-slate-700">' + platformName + '</span>';
+    html += '</div>';
+    html += '</td>';
+    
+    if (download) {
+      // 버전
+      html += '<td class="px-6 py-4">';
+      html += '<span class="text-slate-500">v' + (download.version || 'N/A') + '</span>';
+      html += '</td>';
+      
+      // 다운로드 버튼
+      html += '<td class="px-6 py-4">';
+      html += '<div class="flex items-center justify-end gap-3">';
+      html += '<a href="' + download.url + '" class="inline-flex items-center px-4 py-2 bg-[#0393D6] text-white text-sm font-medium rounded-lg hover:bg-[#0282be] transition-colors">';
+      html += '다운로드';
+      html += '</a>';
+      
+      // QR 코드 버튼 (iOS, Android만)
+      if (platform === 'IOS' || platform === 'ANDROID') {
+        html += '<button class="qr-code-btn inline-flex items-center px-4 py-2 bg-white border border-slate-300 text-slate-600 text-sm font-medium rounded-lg hover:bg-slate-50 hover:border-slate-400 transition-colors" data-url="' + download.url + '" data-platform="' + platformName + '">';
+        html += '<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">';
+        html += '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"></path>';
+        html += '</svg>';
+        html += 'QR';
+        html += '</button>';
+      }
+      
+      html += '</div>';
+      html += '</td>';
+    } else {
+      // Not Available
+      html += '<td class="px-6 py-4"><span class="text-slate-400">-</span></td>';
+      html += '<td class="px-6 py-4 text-right">';
+      html += '<span class="inline-flex items-center px-3 py-1 bg-slate-100 text-slate-400 text-sm rounded-full">N/A</span>';
+      html += '</td>';
+    }
+    
+    html += '</tr>';
+  });
+  
+  html += '</tbody>';
+  html += '</table>';
+  html += '</div>';
+  
+  html += '</div>';
+
+  return html;
+},
 
  initQRCodeModal: function() {
   var self = this;

@@ -44,16 +44,21 @@ function getEnvBadge(appName, appId) {
 }
 
 
-  var urlParams = new URLSearchParams(window.location.search);
-  var isDetailPage = urlParams.has('id');
+ var urlParams = new URLSearchParams(window.location.search);
+var isDetailPage = urlParams.has('id');
 
-  if (isDetailPage) {
-    console.log('Detail page detected');
-    initDetailPage();
-  } else {
-    console.log('List page detected');
-    initListPage();
+// 상세 페이지면 히어로 섹션 숨기기
+if (isDetailPage) {
+  var heroSection = document.getElementById('hero-section');
+  if (heroSection) {
+    heroSection.style.display = 'none';
   }
+  console.log('Detail page detected');
+  initDetailPage();
+} else {
+  console.log('List page detected');
+  initListPage();
+}
 
   // ========================================
   // 상세 페이지
@@ -61,7 +66,7 @@ function getEnvBadge(appName, appId) {
   function initDetailPage() {
     var appId = urlParams.get('id');
     
-    fetch('./assets/apps.json?220311')
+fetch('/assets/apps.json?220311')
       .then(function(response) { return response.json(); })
       .then(function(result) {
         var apps = Array.isArray(result.apps) ? result.apps : [result.apps];
@@ -84,17 +89,20 @@ function getEnvBadge(appName, appId) {
     var container = document.getElementById('app_detail');
     if (!container) return;
 
-    // 이미지 경로 수정
-    var imageUrl = app.indexImageUrl || app.iconUrl || '';
-    if (imageUrl.startsWith('./')) {
-      imageUrl = imageUrl.substring(2);
-    }
+var imageUrl = app.indexImageUrl || app.iconUrl || '';
+if (imageUrl.startsWith('./')) {
+  imageUrl = '/' + imageUrl.substring(2);
+} else if (imageUrl && !imageUrl.startsWith('/') && !imageUrl.startsWith('http')) {
+  imageUrl = '/' + imageUrl;
+}
 
-  var iconUrl = app.iconUrl || '';  // 이거 있어야 해!
-  if (iconUrl.startsWith('./')) {
-    iconUrl = iconUrl.substring(2);
-  }
-
+// 2. iconUrl
+var iconUrl = app.iconUrl || '';
+if (iconUrl.startsWith('./')) {
+  iconUrl = '/' + iconUrl.substring(2);
+} else if (iconUrl && !iconUrl.startsWith('/') && !iconUrl.startsWith('http')) {
+  iconUrl = '/' + iconUrl;
+}
 
 // 스크린샷 HTML
 var screenshotsHtml = '';
@@ -103,10 +111,13 @@ if (app.screenshots && app.screenshots.length > 0) {
   screenshotsHtml += '<h3 class="text-lg font-semibold text-slate-800 mb-4">스크린샷</h3>';
   screenshotsHtml += '<div class="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-4 md:gap-4 md:overflow-visible">';
   app.screenshots.forEach(function(screenshot) {
-    var ssUrl = screenshot.url || '';
-    if (ssUrl.startsWith('./')) {
-      ssUrl = ssUrl.substring(2);
-    }
+// 3. 스크린샷 (screenshotsHtml 안에서)
+var ssUrl = screenshot.url || '';
+if (ssUrl.startsWith('./')) {
+  ssUrl = '/' + ssUrl.substring(2);
+} else if (ssUrl && !ssUrl.startsWith('/') && !ssUrl.startsWith('http')) {
+  ssUrl = '/' + ssUrl;
+}
     screenshotsHtml += '<div class="flex-shrink-0 w-32 md:w-auto snap-center">';
     screenshotsHtml += '<div class="aspect-[9/16] bg-slate-100 rounded-lg overflow-hidden shadow-sm">';
     screenshotsHtml += '<img src="' + ssUrl + '" alt="Screenshot" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300 cursor-pointer">';
@@ -223,75 +234,77 @@ if (app.histories && app.histories.length > 0) {
   // ========================================
   // 목록 페이지
   // ========================================
-  function initListPage() {
-    var apps = [];
-    var filteredApps = [];
-    var currentFilters = {
-      customer: null,
-      appType: null,
-      platform: null,
-      environment: null,
-      search: ''
-    };
+function initListPage() {
+  var apps = [];
+  var filteredApps = [];
+  var currentFilters = {
+    customer: null,
+    appType: null,
+    platform: null,
+    environment: null,
+    search: ''
+  };
 
-    // 필터 서랍 숨기기
-    setTimeout(function() {
-      var drawer = document.getElementById('filter-drawer');
-      if (drawer && !drawer.classList.contains('active')) {
-        drawer.classList.add('hidden');
-      }
-    }, 100);
-
-    // URL 필터 파싱
-    var urlFilters = URLManager.parseURL();
-    currentFilters = urlFilters;
-
-    // apps.json 로드
-    fetch('./assets/apps.json?220311')
-      .then(function(response) { return response.json(); })
-      .then(function(result) {
-        var appList = [];
-        if (result.apps === null) {
-          appList = [];
-        } else if (Array.isArray(result.apps)) {
-          appList = result.apps;
-        } else {
-          appList = [result.apps];
-        }
-        
-        apps = appList.filter(function(app) { return app.isUse; });
-        
-        // 필터 초기화
-        var options = FilterManager.getFilterOptions(apps);
-        FilterManager.createFilterUI('filter-container', options);
-        FilterManager.setFilters(currentFilters);
-        
-        // 초기 렌더링
-        applyFilters();
-        
-        // 이벤트 리스너
-        window.addEventListener('filtersChanged', function(e) {
-          currentFilters = e.detail;
-          applyFilters();
-          URLManager.updateBrowserURL(currentFilters, false);
-        });
-
-        URLManager.onURLChange(function(filters) {
-          currentFilters = filters;
-          FilterManager.setFilters(filters);
-          applyFilters();
-        });
-      })
-      .catch(function(err) {
-        console.error('Error loading apps:', err);
-      });
-
-    function applyFilters() {
-      filteredApps = apps.filter(function(app) {
-        return FilterManager.matchesFilters(app, currentFilters);
-      });
-      renderAppList();
+  // 필터 서랍 숨기기
+  setTimeout(function() {
+    var drawer = document.getElementById('filter-drawer');
+    if (drawer && !drawer.classList.contains('active')) {
+      drawer.classList.add('hidden');
     }
+  }, 100);
+
+  // apps.json 로드
+  fetch('/assets/apps.json?220311')
+    .then(function(response) { return response.json(); })
+    .then(function(result) {
+      var appList = [];
+      if (result.apps === null) {
+        appList = [];
+      } else if (Array.isArray(result.apps)) {
+        appList = result.apps;
+      } else {
+        appList = [result.apps];
+      }
+      
+      apps = appList.filter(function(app) { return app.isUse; });
+      
+      // 필터 옵션 추출
+      var options = FilterManager.getFilterOptions(apps);
+      
+      // ★ URL 필터 파싱 (options 전달해서 slug 매칭!)
+      var urlFilters = URLManager.parseURL(options);
+      currentFilters = urlFilters;
+      
+      // 필터 UI 생성
+      FilterManager.createFilterUI('filter-container', options);
+      FilterManager.setFilters(currentFilters);
+      
+      // 초기 렌더링
+      applyFilters();
+      
+      // 이벤트 리스너
+      window.addEventListener('filtersChanged', function(e) {
+        currentFilters = e.detail;
+        applyFilters();
+        URLManager.updateBrowserURL(currentFilters, false);
+      });
+
+      URLManager.onURLChange(function(filters) {
+        currentFilters = filters;
+        FilterManager.setFilters(filters);
+        applyFilters();
+      });
+    })
+    .catch(function(err) {
+      console.error('Error loading apps:', err);
+    });
+
+  function applyFilters() {
+    filteredApps = apps.filter(function(app) {
+      return FilterManager.matchesFilters(app, currentFilters);
+    });
+    renderAppList();
+  }
 function renderAppList() {
   var container = document.getElementById('app_detail');
   if (!container) return;
@@ -314,10 +327,12 @@ function renderAppList() {
 
   filteredApps.forEach(function(app) {
     // 이미지 경로 수정
-    var imageUrl = app.indexImageUrl || app.iconUrl || '';
-    if (imageUrl.startsWith('./')) {
-      imageUrl = imageUrl.substring(2);
-    }
+  var imageUrl = app.indexImageUrl || app.iconUrl || '';
+if (imageUrl.startsWith('./')) {
+  imageUrl = '/' + imageUrl.substring(2);  // "/" 추가!
+} else if (imageUrl && !imageUrl.startsWith('/') && !imageUrl.startsWith('http')) {
+  imageUrl = '/' + imageUrl;
+}
 
     // var iconUrl = app.iconUrl || '';
     // if (iconUrl.startsWith('./')) {
