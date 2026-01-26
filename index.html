@@ -161,12 +161,12 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="max-w-2xl">
                 <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white/80 text-sm mb-4">
-                    <span class="flex h-2 w-2 rounded-full bg-[#0393D6] animate-pulse"></span>
-                    Mobile App Center
-                </div>
+    <span class="flex h-2 w-2 rounded-full bg-[#0393D6] animate-pulse"></span>
+       Trusted by Hospitals
+</div>
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-3 leading-tight">
-                      스마트 의료의 시작,<br class="sm:hidden">
-    <span class="bg-gradient-to-r from-[#0393D6] via-cyan-400 to-[#0393D6] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">지금 다운로드</span>
+                      스마트 의료의 시작, <br class="sm:hidden">
+    <span class="bg-gradient-to-r from-[#0393D6] via-cyan-400 to-[#0393D6] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient"> 지금 다운로드</span>
 </h2>
               
             </div>
@@ -187,7 +187,7 @@
 
         <main class="mdl-layout__content">
             <!-- 필터 섹션 -->
-            <div class="bg-white border-b border-slate-200 shadow-sm">
+            <div id="filter-section" class="bg-white border-b border-slate-200 shadow-sm">
                 <div class="max-w-6xl mx-auto px-4 py-4">
                     <div id="filter-container">
                         <!-- FilterManager.js가 여기에 UI를 생성 -->
@@ -202,20 +202,39 @@
                 </div>
             </div>
             
-            <!-- 푸터 -->
-            <footer class="bg-slate-800 text-slate-400 mt-auto">
-                <div class="max-w-6xl mx-auto px-4 py-8">
-                    <div class="flex flex-col md:flex-row justify-between items-center">
-                        <div class="mb-4 md:mb-0">
-                            <span class="text-white font-semibold">Download Service</span>
-                            <span class="ml-2 text-sm">Enterprise App Distribution Platform</span>
-                        </div>
-                        <div class="text-sm">
-                            © 2026 ezCaretech. All rights reserved.
-                        </div>
+           <!-- 푸터 -->
+    <footer class="bg-gradient-to-br from-[#0a1628] via-[#0d2847] to-[#0f3460] text-white relative overflow-hidden">
+        <!-- 배경 장식 -->
+        <div class="absolute top-0 left-1/4 w-64 h-64 bg-[#0393D6]/10 rounded-full blur-[80px]"></div>
+        
+        <div class="relative max-w-6xl mx-auto px-4 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <!-- 로고 & 설명 -->
+                <div class="flex items-center gap-4">
+                    <img src="/images/logo-default.png" alt="Logo" class="h-10 w-auto opacity-80">
+                    <div>
+                        <h4 class="font-bold text-lg">
+                            Download
+                            <span class="bg-gradient-to-r from-[#0393D6] to-cyan-400 bg-clip-text text-transparent">Service</span>
+                        </h4>
+                        <p class="text-white/50 text-sm">Enterprise App Distribution Platform</p>
                     </div>
                 </div>
-            </footer>
+
+                <!-- 링크 -->
+                <div class="flex items-center gap-6 text-sm">
+                    <a href="/" class="text-white/60 hover:text-white transition-colors">Apps</a>
+                    <a href="/about.html" class="text-white/60 hover:text-white transition-colors">About</a>
+                    <a href="#" class="text-white/60 hover:text-white transition-colors">Support</a>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white/40 text-sm">© 2026 ezCaretech. All rights reserved.</p>
+                <p class="text-white/40 text-sm">대한민국 디지털 헬스케어 대표기업</p>
+            </div>
+        </div>
+    </footer>
         </main>
     </div>
 

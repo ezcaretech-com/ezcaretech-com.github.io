@@ -47,12 +47,18 @@ function getEnvBadge(appName, appId) {
  var urlParams = new URLSearchParams(window.location.search);
 var isDetailPage = urlParams.has('id');
 
-// 상세 페이지면 히어로 섹션 숨기기
+// 상세 페이지면 히어로 섹션 + 필터 숨기기
 if (isDetailPage) {
   var heroSection = document.getElementById('hero-section');
   if (heroSection) {
     heroSection.style.display = 'none';
   }
+  
+  var filterContainer = document.getElementById('filter-section');
+  if (filterContainer) {
+    filterContainer.style.display = 'none';
+  }
+  
   console.log('Detail page detected');
   initDetailPage();
 } else {
