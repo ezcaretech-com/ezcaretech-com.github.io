@@ -178,7 +178,7 @@ if (app.histories && app.histories.length > 0) {
     container.innerHTML = 
       '<div class="col-span-full">' +
         // 뒤로가기 버튼
-        '<a href="index.html" class="inline-flex items-center gap-2 text-slate-600 hover:text-primary-600 mb-6 transition-colors">' +
+        '<a href="/" class="inline-flex items-center gap-2 text-slate-600 hover:text-primary-600 mb-6 transition-colors">' +
           '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">' +
             '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>' +
           '</svg>' +
@@ -233,7 +233,7 @@ if (app.histories && app.histories.length > 0) {
         '</div>' +
         '<h3 class="text-lg font-semibold text-slate-700 mb-2">앱을 찾을 수 없습니다</h3>' +
         '<p class="text-slate-500 mb-6">요청하신 앱이 존재하지 않습니다.</p>' +
-        '<a href="index.html" class="px-6 py-3 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-colors">목록으로 돌아가기</a>' +
+        '<a href="/" class="px-6 py-3 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-colors">목록으로 돌아가기</a>' +
       '</div>';
   }
 
@@ -410,7 +410,7 @@ if (imageUrl.startsWith('./')) {
 // 하단 영역
 '<div class="flex items-center justify-end pt-4 border-t border-slate-100">' +
   // 상세보기 버튼
-  '<a href="index.html?id=' + (app.id || '') + '" class="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-[#0393D6] to-[#0282be] text-white text-sm font-semibold rounded-lg hover:shadow-lg hover:shadow-[#0393D6]/25 transition-all duration-300">' +
+  '<a href="/index.html?id=' + (app.id || '') + '" class="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-[#0393D6] to-[#0282be] text-white text-sm font-semibold rounded-lg hover:shadow-lg hover:shadow-[#0393D6]/25 transition-all duration-300">' +
     '상세보기' +
     '<svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">' +
       '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>' +
