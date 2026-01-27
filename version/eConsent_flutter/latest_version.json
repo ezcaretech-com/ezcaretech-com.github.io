@@ -1,0 +1,12 @@
+[
+  {
+    "appName": "eConsent",
+    "latestBuildNumber": "65",
+    "packageName": "com.ezcaretech.ezconsent",
+    "latestVersion": "1.0.59",
+    "updateMessage": "",
+    "androidInstallFileUrl": "https://ezcaretech-com.github.io/index.html?id=ezConsent",
+    "iosInstallFileUrl": "",
+    "forceUpdate": "1.0.59"
+  }
+]

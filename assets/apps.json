@@ -737,7 +737,7 @@
         }
       ]
     },
-     {
+    {
       "id": "ezScan_KBC64",
       "name": "ezScan KBC64",
       "isUse": true,
@@ -750,7 +750,7 @@
           "url": "./images/eConsent/screenshot_0127.jpeg",
           "alt": "01"
         },
-          {
+        {
           "url": "./images/eConsent/screenshot_0127_1.jpeg",
           "alt": "02"
         }
@@ -809,14 +809,59 @@
         }
       ],
       "histories": [
-	{
-            "version": "1.1.9",
-            "description": "KBC Nurse-AID 최초 배포",
-            "minSdkVersion": "",
-            "sdkVersion": "",
-            "releaseDate": "2026-01-27",
-            "installUrl": ""
-          }
+        {
+          "version": "1.1.9",
+          "description": "KBC Nurse-AID 최초 배포",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2026-01-27",
+          "installUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "eConsent",
+      "name": "KBC eConsent Mobile Solution",
+      "isUse": true,
+      "iconUrl": "./images/eConsent_flutter/app_icon.png",
+      "indexImageUrl": "./images/eConsent_flutter/app_icon.png",
+      "summary": "KBC eConsent Mobile Solution",
+      "description": "e-Consent system provides convenient functions for signing consents using desktop computers or tablet computers.\nVarious medical forms are displayed electronically and signature data are saved in electronic data as well.\nThis will reduce time in searching and getting medical forms, as well as increasing work efficiency.",
+      "screenshots": [
+        {
+          "url": "./images/eConsent_flutter/screenshot_0001.png",
+          "alt": "login"
+        },
+        {
+          "url": "./images/eConsent_flutter/screenshot_0002.png",
+          "alt": "Patient Search"
+        },
+        {
+          "url": "./images/eConsent_flutter/screenshot_0003.png",
+          "alt": "Consent Search"
+        },
+        {
+          "url": "./images/eConsent_flutter/screenshot_0004.png",
+          "alt": "Consent Write"
+        }
+      ],
+      "downloads": [
+        {
+          "platform": "Android",
+          "version": "1.0.59",
+          "url": "https://ezcaretech-com.github.io/apps/eConsent_flutter/eConsent.apk",
+          "isUse": true
+        }
+      ],
+      "histories": [
+        {
+          "version": "1.0.59",
+          "description": "KBC eConsent 최초 배포",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2026-01-27",
+          "installUrl": ""
+        }
       ]
     }
   ]
