@@ -19,7 +19,7 @@
       if (name.includes('Royal Commission') || name.includes('RCHSP')) return 'Royal Commission';
       if (name.includes('GBC')) return 'GBC';
       if (name.includes('CMC')) return 'CMC';
-      if (name.includes('MBC')) return 'MBC';
+      if (name.includes('KBC')) return 'KBC';
       return 'Other';
     },
 
