@@ -741,20 +741,24 @@
       "id": "ezScan_KBC64",
       "name": "ezScan KBC64",
       "isUse": true,
-      "iconUrl": "./apps/app-placeholder.png",
-      "indexImageUrl": "./apps/app-placeholder.png",
+      "iconUrl": "./apps/ezScan.jpeg",
+      "indexImageUrl": "./apps/ezScan.jpeg",
       "summary": "",
       "description": "ezScan은 종이 기반으로 생성·수집되는 각종 의료 관련 문서를 전자화하여, 의료서비스의 연속성·정확성·보안성·효율성을 확보하기 위한 프로그램입니다.",
       "screenshots": [
         {
-          "url": "./apps/app-placeholder.png",
+          "url": "./images/eConsent/screenshot_0127.jpeg",
           "alt": "01"
+        },
+          {
+          "url": "./images/eConsent/screenshot_0127_1.jpeg",
+          "alt": "02"
         }
       ],
       "downloads": [
         {
           "platform": "Windows",
-          "version": "1.0.1",
+          "version": "1.0.0",
           "url": "https://ezcaretech-com.github.io/files/ezPHR/ezScan/ezScan.Setup.msi",
           "isUse": true
         }
