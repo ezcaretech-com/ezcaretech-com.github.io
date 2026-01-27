@@ -1,0 +1,51 @@
+/* iOS 12 및 구형 브라우저 fallback */
+
+/* legacy 브라우저일 때 헤더 배경 이미지로 대체 */
+.legacy-browser header {
+    background: url('/images/header-bg.jpg') center/cover no-repeat !important;
+}
+
+/* 배경 그라데이션 레이어 숨기기 */
+.legacy-browser header > .absolute.inset-0.bg-gradient-to-br {
+    display: none !important;
+}
+
+/* 애니메이션 배경 장식 숨기기 (blur, glow 등) */
+.legacy-browser header > .absolute.inset-0.overflow-hidden {
+    display: none !important;
+}
+
+/* backdrop-blur 제거하고 단색 배경으로 */
+.legacy-browser .backdrop-blur-sm {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+/* gap 대체 (flexbox gap 미지원) */
+.legacy-browser .gap-1 > * { margin-right: 0.25rem; }
+.legacy-browser .gap-1 > *:last-child { margin-right: 0; }
+.legacy-browser .gap-1\.5 > * { margin-right: 0.375rem; }
+.legacy-browser .gap-1\.5 > *:last-child { margin-right: 0; }
+.legacy-browser .gap-2 > * { margin-right: 0.5rem; }
+.legacy-browser .gap-2 > *:last-child { margin-right: 0; }
+.legacy-browser .gap-4 > * { margin-right: 1rem; }
+.legacy-browser .gap-4 > *:last-child { margin-right: 0; }
+
+/* 그라데이션 텍스트 fallback */
+.legacy-browser .bg-clip-text {
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    color: #0393D6 !important;
+}
+
+.legacy-browser .text-transparent {
+    color: #0393D6 !important;
+}
+
+/* 애니메이션 비활성화 (성능 이슈) */
+.legacy-browser .animate-pulse,
+.legacy-browser .animate-ping,
+.legacy-browser .animate-gradient {
+    animation: none !important;
+}

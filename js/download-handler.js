@@ -56,7 +56,7 @@ createDownloadSection: function(downloads) {
         var platformName = PLATFORM_NAMES[currentPlatform] || currentPlatform;
         var icon = PLATFORM_ICONS[currentPlatform] || '📱';
         
-        html += '<div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 w-full max-w-md">';
+        html += '<div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 w-full max-w-xl mx-auto">';
         html += '<div class="flex items-center gap-4 mb-4">';
         html += '<span class="text-3xl">' + icon + '</span>';
         html += '<div>';
