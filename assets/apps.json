@@ -773,6 +773,51 @@
           "installUrl": ""
         }
       ]
+    },
+    {
+      "id": "Nurse-AID",
+      "name": "KBC CLMA Mobile Solution",
+      "isUse": true,
+      "iconUrl": "./images/nurseAID/app_icon.png",
+      "indexImageUrl": "./images/nurseAID/index.png",
+      "summary": "KBC CLMA Mobile Solution",
+      "description": "CLMA (Closed Loop Medication Administration) is a hospital solution that enhances patient safety by ensuring accurate medication and procedure verification through barcode scanning. It integrates with EMR systems to streamline clinical workflows and reduce errors.",
+      "screenshots": [
+        {
+          "url": "./images/nurseAID/screenshot_0001.png",
+          "alt": "login"
+        },
+        {
+          "url": "./images/nurseAID/screenshot_0002.png",
+          "alt": "mdeication"
+        },
+        {
+          "url": "./images/nurseAID/screenshot_0003.png",
+          "alt": "patient"
+        },
+        {
+          "url": "./images/nurseAID/screenshot_0004.png",
+          "alt": "blood transfusion"
+        }
+      ],
+      "downloads": [
+        {
+          "platform": "Android",
+          "version": "1.1.9",
+          "url": "https://ezcaretech-com.github.io/apps/nurseAID/app-kbcproduction-release.apk",
+          "isUse": true
+        }
+      ],
+      "histories": [
+	{
+            "version": "1.1.9",
+            "description": "KBC Nurse-AID 최초 배포",
+            "minSdkVersion": "",
+            "sdkVersion": "",
+            "releaseDate": "2026-01-27",
+            "installUrl": ""
+          }
+      ]
     }
   ]
 }

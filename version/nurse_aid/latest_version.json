@@ -1,0 +1,12 @@
+[
+  {
+    "appName": "Nurse AID",
+    "latestBuildNumber": "40",
+    "packageName": "com.ezcaretech.clma.kbc",
+    "latestVersion": "1.1.9",
+    "updateMessage": "",
+    "androidInstallFileUrl": "https://ezcaretech-com.github.io/index.html",
+    "iosInstallFileUrl": "",
+    "forceUpdate": "1.1.9"
+  }
+]
