@@ -665,6 +665,14 @@
       "histories": [
         {
           "version": "1.0.0",
+          "description": "Bug fixes and performance improvements (Build 54)",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2026-02-04",
+          "installUrl": ""
+        },
+        {
+          "version": "1.0.0",
           "description": "Bug fixes and performance improvements (Build 53) (2)",
           "minSdkVersion": "",
           "sdkVersion": "",
