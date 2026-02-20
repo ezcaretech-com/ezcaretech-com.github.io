@@ -878,6 +878,88 @@
           "installUrl": ""
         }
       ]
+    },
+    {
+      "id": "ezARIA_KBC",
+      "name": "ezARIA KBC",
+      "isUse": true,
+      "iconUrl": "./apps/ezARIA/app_icon.png",
+      "indexImageUrl": "./apps/ezARIA/app_icon.png",
+      "summary": "",
+      "description": "ezARIA는 병원 내 의료진 간 소통과 협업을 실시간으로 지원하는 통합 커뮤니케이션 플랫폼으로,안전하고 신속한 정보 공유를 통해 의료서비스의 효율성·연속성·정확성·품질 향상을 지원하는 시스템입니다.",
+      "screenshots": [
+          {
+            "url": "./apps/ezARIA/screenshot1.png",
+            "alt": "01"
+          },
+          {
+              "url": "./apps/ezARIA/screenshot2.png",
+            "alt": "02"
+          },
+          {
+              "url": "./apps/ezARIA/screenshot3.png",
+            "alt": "03"
+          }
+      ],
+      "downloads": [
+        {
+          "platform": "Windows",
+          "version": "1.5.16",
+          "url": "https://ezcaretech-com.github.io/files/ezARIA/ezARIA_kbc_dev_v_1_5_16.exe",
+          "isUse": true
+        }
+      ],
+      "histories": [
+        {
+          "version": "1.5.16",
+          "description": "inhouse Release",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2026-02-20",
+          "installUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "ezARIA_gbc",
+      "name": "ezARIA GBC",
+      "isUse": true,
+      "iconUrl": "./apps/ezARIA/app_icon.png",
+      "indexImageUrl": "./apps/ezARIA/app_icon.png",
+      "summary": "",
+      "description": "ezARIA는 병원 내 의료진 간 소통과 협업을 실시간으로 지원하는 통합 커뮤니케이션 플랫폼으로, 안전하고 신속한 정보 공유를 통해 의료서비스의 효율성·연속성·정확성·품질 향상을 지원하는 시스템입니다.",
+      "screenshots": [
+        {
+          "url": "./apps/ezARIA/screenshot1.png",
+          "alt": "01"
+        },
+        {
+            "url": "./apps/ezARIA/screenshot2.png",
+          "alt": "02"
+        },
+        {
+            "url": "./apps/ezARIA/screenshot3.png",
+          "alt": "03"
+        }
+      ],
+      "downloads": [
+        {
+          "platform": "Windows",
+          "version": "1.5.16",
+          "url": "https://ezcaretech-com.github.io/files/ezARIA/ezARIA_gbc_dev_v_1_5_16.exe",
+          "isUse": true
+        }
+      ],
+      "histories": [
+        {
+          "version": "1.5.16",
+          "description": "inhouse Release",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2026-02-20",
+          "installUrl": ""
+        }
+      ]
     }
   ]
 }
