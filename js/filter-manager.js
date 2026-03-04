@@ -28,8 +28,11 @@
      */
     extractAppType: function(app) {
       var id = app.id || '';
-      if (id.includes('ezconsent')) return 'eConsent';
+      if (id.includes('ezconsent')|| id.includes('eConsent'))return 'eConsent';
       if (id.includes('ezphr') || id.includes('patient')) return 'Patient Portal';
+      if (id.includes('ezARIA')) return 'ezARIA';
+      if (id.includes('ezScan')) return 'ezScan';
+      if (id.includes('Nurse-AID')) return 'CLMA';
       return 'Other';
     },
 
