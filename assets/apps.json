@@ -482,6 +482,14 @@
       "histories": [
         {
           "version": "1.0.0",
+          "description": "오류 수정 및 성능 개선.(빌드번호 57)",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2026-03-18",
+          "installUrl": ""
+        },
+        {
+          "version": "1.0.0",
           "description": "오류 수정 및 성능 개선.(빌드번호 42)",
           "minSdkVersion": "",
           "sdkVersion": "",
@@ -832,14 +840,14 @@
           "releaseDate": "2026-02-27",
           "installUrl": ""
         },
-	      {
-            "version": "1.1.9",
-            "description": "KBC Nurse-AID 최초 배포",
-            "minSdkVersion": "",
-            "sdkVersion": "",
-            "releaseDate": "2026-01-27",
-            "installUrl": ""
-          }
+        {
+          "version": "1.1.9",
+          "description": "KBC Nurse-AID 최초 배포",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2026-01-27",
+          "installUrl": ""
+        }
       ]
     },
     {
@@ -896,18 +904,18 @@
       "summary": "",
       "description": "ezARIA는 병원 내 의료진 간 소통과 협업을 실시간으로 지원하는 통합 커뮤니케이션 플랫폼으로,안전하고 신속한 정보 공유를 통해 의료서비스의 효율성·연속성·정확성·품질 향상을 지원하는 시스템입니다.",
       "screenshots": [
-          {
-            "url": "./apps/ezARIA/screenshot1.png",
-            "alt": "01"
-          },
-          {
-              "url": "./apps/ezARIA/screenshot2.png",
-            "alt": "02"
-          },
-          {
-              "url": "./apps/ezARIA/screenshot3.png",
-            "alt": "03"
-          }
+        {
+          "url": "./apps/ezARIA/screenshot1.png",
+          "alt": "01"
+        },
+        {
+          "url": "./apps/ezARIA/screenshot2.png",
+          "alt": "02"
+        },
+        {
+          "url": "./apps/ezARIA/screenshot3.png",
+          "alt": "03"
+        }
       ],
       "downloads": [
         {
@@ -942,11 +950,11 @@
           "alt": "01"
         },
         {
-            "url": "./apps/ezARIA/screenshot2.png",
+          "url": "./apps/ezARIA/screenshot2.png",
           "alt": "02"
         },
         {
-            "url": "./apps/ezARIA/screenshot3.png",
+          "url": "./apps/ezARIA/screenshot3.png",
           "alt": "03"
         }
       ],
