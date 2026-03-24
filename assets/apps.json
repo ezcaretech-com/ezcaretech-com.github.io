@@ -482,6 +482,14 @@
       "histories": [
         {
           "version": "1.0.0",
+          "description": "오류 수정 및 성능 개선.(빌드번호 62)",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2026-03-24",
+          "installUrl": ""
+        },
+        {
+          "version": "1.0.0",
           "description": "Public URL 적용.(빌드번호 60)",
           "minSdkVersion": "",
           "sdkVersion": "",
