@@ -696,6 +696,14 @@
       "histories": [
         {
           "version": "1.0.0",
+          "description": "Fixed an issue where reservation cancel/change times were displayed incorrectly (Build 66)",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2026-03-31",
+          "installUrl": ""
+        },
+        {
+          "version": "1.0.0",
           "description": "Extended login banner display time from 5s to 30s & fixed Android issue where it didn’t appear (Build 65)",
           "minSdkVersion": "",
           "sdkVersion": "",
