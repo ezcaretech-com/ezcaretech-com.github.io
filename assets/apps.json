@@ -294,12 +294,12 @@
     },
     {
       "id": "ezphr_gbc",
-      "name": "Patient Portal for GBC",
+      "name": "Patient Portal for GBC Staging",
       "isUse": true,
       "iconUrl": "./apps/ezphr/patient_portal.png",
       "indexImageUrl": "./apps/ezphr/patient_portal.png",
-      "summary": "Patient Portal for GBC",
-      "description": "Patient Portal for GBC",
+      "summary": "Patient Portal for GBC Staging",
+      "description": "Patient Portal for GBC Staging",
       "screenshots": [
         {
           "url": "./apps/ezphr/01.png",
@@ -321,18 +321,26 @@
       "downloads": [
         {
           "platform": "Android",
-          "version": "0.0.14",
+          "version": "1.0.0",
           "url": "https://aria.ezcaretech.com/files/ezPHR/gbc/app-gbcstaging-release.apk",
           "isUse": true
         },
         {
           "platform": "IOS",
-          "version": "0.0.14",
+          "version": "1.0.0",
           "url": "itms-services://?action=download-manifest&url=https://ezcaretech-com.github.io/files/ezPHR/gbc/manifest.plist",
           "isUse": true
         }
       ],
       "histories": [
+        {
+          "version": "1.0.0",
+          "description": "오류 수정 및 성능 개선. (빌드번호 68)",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2026-04-15",
+          "installUrl": ""
+        },
         {
           "version": "0.0.14",
           "description": "오류 수정 및 성능 개선.",
