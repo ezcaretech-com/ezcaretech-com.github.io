@@ -720,6 +720,14 @@
       "histories": [
         {
           "version": "1.0.0",
+          "description": "Bug fixes and performance improvements (Build 70)",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2026-04-22",
+          "installUrl": ""
+        },
+        {
+          "version": "1.0.0",
           "description": "Updated base URL to production (Build 69)",
           "minSdkVersion": "",
           "sdkVersion": "",
