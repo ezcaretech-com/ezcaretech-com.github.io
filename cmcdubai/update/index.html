@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Update the CMC Dubai app to the latest version.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta property="og:title" content="Update CMC Dubai">
+    <meta property="og:description" content="Please update your CMC Dubai app to continue using the service smoothly.">
+    <title>Update CMC Dubai</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --brand: #0393d6;
+            --brand-dark: #02608e;
+            --ink: #0f172a;
+            --muted: #475569;
+            --line: #dbe6ef;
+            --surface: #ffffff;
+            --page: #f5f8fb;
+            --success: #0f9f6e;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            min-height: 100%;
+            margin: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            min-height: 100dvh;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--ink);
+            background:
+                linear-gradient(180deg, rgba(3, 147, 214, 0.08), rgba(245, 248, 251, 0) 38%),
+                var(--page);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .page {
+            display: flex;
+            min-height: 100vh;
+            min-height: 100dvh;
+            flex-direction: column;
+        }
+
+        .header {
+            border-bottom: 1px solid rgba(219, 230, 239, 0.86);
+            background: rgba(255, 255, 255, 0.84);
+        }
+
+        .header-inner,
+        .content,
+        .footer-inner {
+            width: min(100%, 1040px);
+            margin: 0 auto;
+            padding-right: 24px;
+            padding-left: 24px;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 72px;
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            min-width: 0;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .brand img {
+            display: block;
+            width: auto;
+            height: 32px;
+        }
+
+        .brand-text {
+            display: flex;
+            min-width: 0;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .brand-title {
+            overflow: hidden;
+            font-size: 15px;
+            font-weight: 750;
+            line-height: 1.2;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .brand-subtitle {
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.2;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            min-height: 32px;
+            padding: 0 12px;
+            border: 1px solid rgba(15, 159, 110, 0.18);
+            border-radius: 999px;
+            color: #047857;
+            background: rgba(16, 185, 129, 0.08);
+            font-size: 13px;
+            font-weight: 650;
+            white-space: nowrap;
+        }
+
+        .badge-mark {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: var(--success);
+        }
+
+        main {
+            display: flex;
+            flex: 1;
+            align-items: center;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 380px;
+            gap: 48px;
+            align-items: center;
+            padding-top: 56px;
+            padding-bottom: 56px;
+        }
+
+        .copy {
+            max-width: 620px;
+        }
+
+        .eyebrow {
+            margin: 0 0 18px;
+            color: var(--brand-dark);
+            font-size: 14px;
+            font-weight: 750;
+            letter-spacing: 0;
+        }
+
+        h1 {
+            max-width: 720px;
+            margin: 0;
+            color: var(--ink);
+            font-size: clamp(34px, 5vw, 56px);
+            font-weight: 800;
+            letter-spacing: 0;
+            line-height: 1.02;
+        }
+
+        .lead {
+            max-width: 590px;
+            margin: 22px 0 0;
+            color: var(--muted);
+            font-size: 18px;
+            line-height: 1.65;
+        }
+
+        .device-message {
+            display: inline-flex;
+            align-items: center;
+            min-height: 38px;
+            margin-top: 28px;
+            padding: 0 14px;
+            border: 1px solid rgba(3, 147, 214, 0.18);
+            border-radius: 999px;
+            color: var(--brand-dark);
+            background: rgba(3, 147, 214, 0.08);
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .device-message[hidden] {
+            display: none;
+        }
+
+        .panel {
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--surface);
+            box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+        }
+
+        .panel-header {
+            padding: 24px 24px 0;
+        }
+
+        .app-icon {
+            display: block;
+            width: 72px;
+            height: 72px;
+            border-radius: 16px;
+            border: 1px solid var(--line);
+            background: #ffffff;
+            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
+            object-fit: cover;
+        }
+
+        .panel-title {
+            margin: 18px 0 4px;
+            font-size: 22px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .panel-subtitle {
+            margin: 0;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .store-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 24px;
+        }
+
+        .store-option {
+            display: flex;
+        }
+
+        .store-option[hidden] {
+            display: none;
+        }
+
+        .store-link {
+            display: inline-flex;
+            border-radius: 8px;
+            transition: transform 160ms ease, box-shadow 160ms ease;
+        }
+
+        .store-link:hover {
+            box-shadow: 0 12px 24px rgba(15, 23, 42, 0.18);
+            transform: translateY(-1px);
+        }
+
+        .store-link:focus-visible {
+            outline: 3px solid rgba(3, 147, 214, 0.36);
+            outline-offset: 3px;
+        }
+
+        .store-badge {
+            display: block;
+            width: auto;
+            height: 52px;
+            max-width: 100%;
+        }
+
+        .footer {
+            border-top: 1px solid rgba(219, 230, 239, 0.86);
+            color: #64748b;
+            background: rgba(255, 255, 255, 0.6);
+            font-size: 13px;
+        }
+
+        .footer-inner {
+            display: flex;
+            min-height: 56px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        @media (max-width: 820px) {
+            .content {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .panel {
+                width: 100%;
+                max-width: 520px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .header-inner,
+            .content,
+            .footer-inner {
+                padding-right: 18px;
+                padding-left: 18px;
+            }
+
+            .header-inner {
+                min-height: 68px;
+            }
+
+            .brand-subtitle,
+            .badge {
+                display: none;
+            }
+
+            main {
+                align-items: flex-start;
+            }
+
+            .content {
+                padding-top: 44px;
+                padding-bottom: 44px;
+            }
+
+            h1 {
+                font-size: 36px;
+                line-height: 1.07;
+            }
+
+            .lead {
+                font-size: 16px;
+                line-height: 1.58;
+            }
+
+            .device-message {
+                align-items: flex-start;
+                border-radius: 8px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                line-height: 1.45;
+            }
+
+            .panel-header,
+            .store-list {
+                padding-right: 20px;
+                padding-left: 20px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                padding-top: 16px;
+                padding-bottom: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="header-inner">
+                <div class="brand" aria-label="ezCaretech">
+                    <img src="../../images/logo-default.png" alt="ezCaretech">
+                    <div class="brand-text">
+                        <div class="brand-title">CMC Dubai</div>
+                        <div class="brand-subtitle">Patient mobile service</div>
+                    </div>
+                </div>
+                <div class="badge" aria-label="Latest version available">
+                    <span class="badge-mark" aria-hidden="true"></span>
+                    Update available
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="content">
+                <section class="copy" aria-labelledby="page-title">
+                    <p class="eyebrow">CMC Dubai app update</p>
+                    <h1 id="page-title">Please update your app.</h1>
+                    <p class="lead">
+                        To continue using CMC Dubai services smoothly, please install the latest version of the app from your device's app store.
+                    </p>
+                    <p id="platform-message" class="device-message" aria-live="polite" hidden></p>
+                </section>
+
+                <section class="panel" aria-label="App store links">
+                    <div class="panel-header">
+                        <img class="app-icon" src="../../apps/ezphr/patient_portal_mbc_cmc.png" alt="CMC Dubai app icon">
+                        <h2 class="panel-title">Get the latest version</h2>
+                        <p class="panel-subtitle">Select the store below to continue.</p>
+                    </div>
+
+                    <div class="store-list">
+                        <div class="store-option" data-store="ios">
+                            <a class="store-link" href="https://apps.apple.com/app/id6753163024" aria-label="Update on the App Store">
+                                <img class="store-badge" src="store-apple.svg" alt="Download on the App Store">
+                            </a>
+                        </div>
+
+                        <div class="store-option" data-store="android">
+                            <a class="store-link" href="https://play.google.com/store/apps/details?id=com.ezcaretech.ezphr.cmcdubai" aria-label="Update on Google Play">
+                                <img class="store-badge" src="store-google.svg" alt="Get it on Google Play">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-inner">
+                <span>&copy; 2026 ezCaretech. All rights reserved.</span>
+                <span>Secure hospital mobile service</span>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        (function () {
+            var userAgent = navigator.userAgent || navigator.vendor || "";
+            var platform = navigator.platform || "";
+            var maxTouchPoints = navigator.maxTouchPoints || 0;
+            var isAndroid = /android/i.test(userAgent);
+            var isIOS = /iPad|iPhone|iPod/.test(userAgent) || (platform === "MacIntel" && maxTouchPoints > 1);
+            var message = document.getElementById("platform-message");
+            var options = document.querySelectorAll("[data-store]");
+
+            function showStores(storeName) {
+                for (var index = 0; index < options.length; index += 1) {
+                    var option = options[index];
+                    option.hidden = storeName !== "all" && option.getAttribute("data-store") !== storeName;
+                }
+            }
+
+            if (isAndroid && !isIOS) {
+                showStores("android");
+                message.hidden = false;
+                message.textContent = "Please update the app from Google Play.";
+                return;
+            }
+
+            if (isIOS) {
+                showStores("ios");
+                message.hidden = false;
+                message.textContent = "Please update the app from the App Store.";
+                return;
+            }
+
+            showStores("all");
+            message.hidden = true;
+        }());
+    </script>
+</body>
+
+</html>
