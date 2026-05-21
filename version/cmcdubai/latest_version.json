@@ -1,0 +1,14 @@
+{
+  "appName": "CMC Dubai",
+  "packageName": "com.cmcdubai.patientportal",
+  "updateEnabled": true,
+  "latestVersion": "1.0.4",
+  "latestBuildNumber": "5",
+  "minimumSupportedVersion": "1.0.4",
+  "minimumSupportedBuildNumber": "5",
+  "forceUpdate": false,
+  "updateMessage": "A new version is available. Please update the app to continue using CMC Dubai services.",
+  "androidInstallFileUrl": "https://cmcecare.cmcdubai.ae/PPS/index.html",
+  "iosInstallFileUrl": "https://cmcecare.cmcdubai.ae/PPS/index.html",
+  "lastUpdatedAt": "2026-05-21T00:00:00+09:00"
+}
