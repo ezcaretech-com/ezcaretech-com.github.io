@@ -946,12 +946,20 @@
       "downloads": [
         {
           "platform": "Android",
-          "version": "1.2.0",
+          "version": "1.3.14",
           "url": "https://ezcaretech-com.github.io/apps/nurseAID/app-kbcdevelopment-release.apk",
           "isUse": true
         }
       ],
       "histories": [
+        {
+          "version": "1.3.14",
+          "description": "통증평가, 낙상평가, 욕창평가 추가",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2026-06-04",
+          "installUrl": ""
+        },
         {
           "version": "1.2.0",
           "description": "KBC 내부망용 Release",
