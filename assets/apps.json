@@ -918,7 +918,7 @@
       ]
     },
     {
-      "id": "Nurse-AID",
+      "id": "Nurse-AID_KBC",
       "name": "KBC CLMA Mobile Solution",
       "isUse": true,
       "iconUrl": "./images/nurseAID/app_icon.png",
@@ -979,7 +979,7 @@
       ]
     },
     {
-      "id": "Nurse-AID",
+      "id": "Nurse-AID_GBC",
       "name": "GBC CLMA Mobile Solution",
       "isUse": true,
       "iconUrl": "./images/nurseAID/app_icon.png",
