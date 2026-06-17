@@ -926,13 +926,13 @@
       ]
     },
     {
-      "id": "Nurse-AID_KBC",
-      "name": "KBC CLMA Mobile Solution",
+      "id": "Nurse-AID_KBC_dev",
+      "name": "KBC CLMA Mobile Solution (Development)",
       "isUse": true,
       "iconUrl": "./images/nurseAID/app_icon.png",
       "indexImageUrl": "./images/nurseAID/index.png",
-      "summary": "KBC CLMA Mobile Solution",
-      "description": "CLMA (Closed Loop Medication Administration) is a hospital solution that enhances patient safety by ensuring accurate medication and procedure verification through barcode scanning. It integrates with EMR systems to streamline clinical workflows and reduce errors.",
+      "summary": "KBC CLMA Mobile Solution (Development)",
+      "description": "CLMA (Closed Loop Medication Administration) is a hospital solution that enhances patient safety by ensuring accurate medication and procedure verification through barcode scanning. It integrates with EMR systems to streamline clinical workflows and reduce errors. (Development)",
       "screenshots": [
         {
           "url": "./images/nurseAID/screenshot_0001.png",
@@ -982,6 +982,51 @@
           "minSdkVersion": "",
           "sdkVersion": "",
           "releaseDate": "2026-01-27",
+          "installUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "Nurse-AID_KBC",
+      "name": "KBC CLMA Mobile Solution",
+      "isUse": true,
+      "iconUrl": "./images/nurseAID/app_icon.png",
+      "indexImageUrl": "./images/nurseAID/index.png",
+      "summary": "KBC CLMA Mobile Solution",
+      "description": "CLMA (Closed Loop Medication Administration) is a hospital solution that enhances patient safety by ensuring accurate medication and procedure verification through barcode scanning. It integrates with EMR systems to streamline clinical workflows and reduce errors.",
+      "screenshots": [
+        {
+          "url": "./images/nurseAID/screenshot_0001.png",
+          "alt": "login"
+        },
+        {
+          "url": "./images/nurseAID/screenshot_0002.png",
+          "alt": "mdeication"
+        },
+        {
+          "url": "./images/nurseAID/screenshot_0003.png",
+          "alt": "patient"
+        },
+        {
+          "url": "./images/nurseAID/screenshot_0004.png",
+          "alt": "blood transfusion"
+        }
+      ],
+      "downloads": [
+        {
+          "platform": "Android",
+          "version": "1.3.16",
+          "url": "https://ezcaretech-com.github.io/apps/nurseAID/app-kbcproduction-release.apk",
+          "isUse": true
+        }
+      ],
+      "histories": [
+        {
+          "version": "1.3.16",
+          "description": "KBC 외부망 Release",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2026-06-17",
           "installUrl": ""
         }
       ]
