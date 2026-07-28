@@ -66,13 +66,16 @@
 ├── about.html              # About 페이지
 ├── 404.html                # Path 라우팅용 리다이렉트
 ├── js/
-│   ├── vendors.js          # MDL 라이브러리
+│   ├── legacy-check.js     # 구형 브라우저 감지
+│   ├── qrcode.min.js       # QR 생성 (자체 호스팅)
 │   ├── url-manager.js      # URL 라우팅 관리
 │   ├── filter-manager.js   # 필터 UI 및 로직
 │   ├── download-handler.js # 다운로드 섹션 & QR
 │   └── app-integration.js  # 앱 렌더링 통합
 ├── assets/
-│   └── apps.json           # 앱 데이터
+│   ├── apps.json           # 앱 데이터
+│   ├── filter-config.json  # 필터 정의 · 분류 규칙 · 배지 색상
+│   └── README.md           # 위 두 JSON 편집 가이드 (주의사항 포함)
 ├── images/
 │   └── logo-default.png    # 로고 이미지
 └── apps/                   # 앱별 이미지 폴더
