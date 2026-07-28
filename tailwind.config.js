@@ -2,7 +2,9 @@
 module.exports = {
   content: [
     "./*.html",
-    "./js/*.js"
+    "./js/*.js",
+    // 배지 색상 등 클래스명이 설정 파일에 들어있어 함께 스캔해야 purge 되지 않음
+    "./assets/*.json"
   ],
   theme: {
     extend: {

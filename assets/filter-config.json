@@ -1,0 +1,90 @@
+{
+  "filters": [
+    {
+      "key": "customer",
+      "label": "Customer",
+      "type": "rule",
+      "url": { "segment": "category", "aliases": ["customer"], "query": "customer", "match": "slug" }
+    },
+    {
+      "key": "appType",
+      "label": "App Type",
+      "type": "rule",
+      "url": { "segment": "tag", "aliases": ["appType"], "query": "appType", "match": "slug" }
+    },
+    {
+      "key": "platform",
+      "label": "Platform",
+      "type": "platform",
+      "url": { "segment": "platform", "aliases": [], "query": "platform", "match": "upper" }
+    },
+    {
+      "key": "environment",
+      "label": "Environment",
+      "type": "rule",
+      "url": { "segment": "env", "aliases": ["environment"], "query": "env", "match": "slug" }
+    }
+  ],
+
+  "rules": {
+    "customer": {
+      "ignoreCase": false,
+      "fallback": "Other",
+      "matches": [
+        { "value": "Royal Commission", "contains": { "name": ["Royal Commission", "RCHSP"] } },
+        { "value": "GBC", "contains": { "name": ["GBC"] } },
+        { "value": "CMC", "contains": { "name": ["CMC"] } },
+        { "value": "KBC", "contains": { "name": ["KBC"] } }
+      ]
+    },
+
+    "appType": {
+      "ignoreCase": false,
+      "fallback": "Other",
+      "matches": [
+        { "value": "eConsent", "contains": { "id": ["ezconsent", "eConsent"] } },
+        { "value": "Patient Portal", "contains": { "id": ["ezphr", "patient"] } },
+        { "value": "ezARIA", "contains": { "id": ["ezARIA"] } },
+        { "value": "ezScan", "contains": { "id": ["ezScan"] } },
+        { "value": "CLMA", "contains": { "id": ["Nurse-AID"] } }
+      ]
+    },
+
+    "environment": {
+      "ignoreCase": true,
+      "fallback": "Production",
+      "matches": [
+        { "value": "Development", "contains": { "name": ["development"], "id": ["_dev"] } },
+        { "value": "Staging", "contains": { "name": ["staging"], "id": ["_stg"] } },
+        { "value": "Production", "contains": { "name": ["production"], "id": ["_prod"] } }
+      ]
+    }
+  },
+
+  "badges": {
+    "environment": {
+      "Development": {
+        "label": "Development",
+        "class": "bg-orange-100 text-orange-700 border border-orange-200"
+      },
+      "Staging": {
+        "label": "Staging",
+        "class": "bg-purple-100 text-purple-700 border border-purple-200"
+      },
+      "Production": {
+        "label": "Production",
+        "class": "bg-green-100 text-green-700 border border-green-200"
+      }
+    }
+  },
+
+  "ui": {
+    "searchPlaceholder": "앱 검색...",
+    "filterButtonLabel": "필터",
+    "drawerTitle": "필터 옵션",
+    "allOptionLabel": "전체",
+    "resetButtonLabel": "초기화",
+    "applyButtonLabel": "적용",
+    "searchDebounceMs": 300
+  }
+}

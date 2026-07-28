@@ -3,44 +3,17 @@
 (function (window) {
   'use strict';
 
-  // 환경별 색상 정의 (공통)
-  var ENV_BADGES = {
-    'Development': {
-      class: 'bg-orange-100 text-orange-700 border border-orange-200',
-      label: 'Development'
-    },
-    'Staging': {
-      class: 'bg-purple-100 text-purple-700 border border-purple-200',
-      label: 'Staging'
-    },
-    'Production': {
-      class: 'bg-green-100 text-green-700 border border-green-200',
-      label: 'Production'
-    }
-  };
-
-  // 환경 추출 함수 (이름 + ID 둘 다 확인)
+  // 환경 배지 (추출 규칙 + 색상 모두 /assets/filter-config.json 에 정의)
   function getEnvBadge(appName, appId) {
-    var nameLower = (appName || '').toLowerCase();
-    var idLower = (appId || '').toLowerCase();
+    return FilterManager.getBadgeForApp({ name: appName, id: appId }, 'environment');
+  }
 
-    // Development 체크
-    if (nameLower.includes('development') || idLower.includes('_dev')) {
-      return ENV_BADGES['Development'];
-    }
-
-    // Staging 체크
-    if (nameLower.includes('staging') || idLower.includes('_stg')) {
-      return ENV_BADGES['Staging'];
-    }
-
-    // Production 체크 (명시적으로 있거나, 아무것도 없으면)
-    if (nameLower.includes('production') || idLower.includes('_prod')) {
-      return ENV_BADGES['Production'];
-    }
-
-    // 기본값: Production
-    return ENV_BADGES['Production'];
+  /**
+   * apps.json 주소 (요청마다 타임스탬프를 붙여 캐시를 무력화)
+   * 앱 목록은 수시로 바뀌므로 항상 최신본을 받는다.
+   */
+  function appsJsonUrl() {
+    return '/assets/apps.json?t=' + Date.now();
   }
 
 
@@ -70,7 +43,7 @@
   function initDetailPage() {
     var appId = urlParams.get('id');
 
-    fetch('/assets/apps.json?220311')
+    fetch(appsJsonUrl())
       .then(function (response) { return response.json(); })
       .then(function (result) {
         var apps = Array.isArray(result.apps) ? result.apps : [result.apps];
@@ -111,9 +84,13 @@
     // 스크린샷 HTML
     var screenshotsHtml = '';
     if (app.screenshots && app.screenshots.length > 0) {
+      // 스크린샷 개수에 맞춘 열 수 (1~2장이 과도하게 확대되지 않도록 최소 3열)
+      // Tailwind 스캐너가 찾을 수 있도록 클래스명은 문자열 그대로 둔다
+      var ssCols = app.screenshots.length >= 4 ? 'md:grid-cols-4' : 'md:grid-cols-3';
+
       screenshotsHtml = '<div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 mb-8">';
       screenshotsHtml += '<h3 class="text-lg font-semibold text-slate-800 mb-4">스크린샷</h3>';
-      screenshotsHtml += '<div class="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-4 md:gap-4 md:overflow-visible">';
+      screenshotsHtml += '<div class="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory md:grid ' + ssCols + ' md:gap-4 md:overflow-visible md:items-start">';
       app.screenshots.forEach(function (screenshot) {
         // 3. 스크린샷 (screenshotsHtml 안에서)
         var ssUrl = screenshot.url || '';
@@ -122,10 +99,9 @@
         } else if (ssUrl && !ssUrl.startsWith('/') && !ssUrl.startsWith('http')) {
           ssUrl = '/' + ssUrl;
         }
+        // 고정 비율 박스 없이 원본 비율 그대로 (잘림 없음). 확대 기능이 없으므로 hover 효과도 없음
         screenshotsHtml += '<div class="flex-shrink-0 w-32 md:w-auto snap-center">';
-        screenshotsHtml += '<div class="aspect-[9/16] bg-slate-100 rounded-lg overflow-hidden shadow-sm">';
-        screenshotsHtml += '<img src="' + ssUrl + '" alt="Screenshot" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300 cursor-pointer">';
-        screenshotsHtml += '</div>';
+        screenshotsHtml += '<img src="' + ssUrl + '" alt="Screenshot" class="w-full h-auto rounded-lg border border-slate-200">';
         screenshotsHtml += '</div>';
       });
       screenshotsHtml += '</div>';
@@ -241,13 +217,8 @@
   function initListPage() {
     var apps = [];
     var filteredApps = [];
-    var currentFilters = {
-      customer: null,
-      appType: null,
-      platform: null,
-      environment: null,
-      search: ''
-    };
+    // 필터 키는 설정에서 오므로 여기서는 검색어만 초기화한다 (URL 파싱 결과로 대체됨)
+    var currentFilters = { search: '' };
 
     // 필터 서랍 숨기기
     setTimeout(function () {
@@ -257,10 +228,13 @@
       }
     }, 100);
 
-    // apps.json 로드
-    fetch('/assets/apps.json?220311')
-      .then(function (response) { return response.json(); })
-      .then(function (result) {
+    // apps.json + 필터 설정 로드
+    Promise.all([
+      fetch(appsJsonUrl()).then(function (response) { return response.json(); }),
+      FilterManager.ready
+    ])
+      .then(function (loaded) {
+        var result = loaded[0];
         var appList = [];
         if (result.apps === null) {
           appList = [];
@@ -293,11 +267,13 @@
           URLManager.updateBrowserURL(currentFilters, false);
         });
 
+        // options 를 넘겨야 뒤로가기 시 slug 가 원래 값으로 복원된다
         URLManager.onURLChange(function (filters) {
           currentFilters = filters;
+          FilterManager.resetFilters();
           FilterManager.setFilters(filters);
           applyFilters();
-        });
+        }, options);
       })
       .catch(function (err) {
         console.error('Error loading apps:', err);
@@ -307,7 +283,18 @@
       filteredApps = apps.filter(function (app) {
         return FilterManager.matchesFilters(app, currentFilters);
       });
+      updateAppCount();
       renderAppList();
+    }
+
+    // 제목 옆 앱 개수 (필터 적용 시 걸러진 개수 / 전체)
+    function updateAppCount() {
+      var countEl = document.getElementById('app-count');
+      if (!countEl) return;
+
+      countEl.textContent = filteredApps.length === apps.length
+        ? apps.length + '개'
+        : filteredApps.length + ' / ' + apps.length + '개';
     }
     function renderAppList() {
       var container = document.getElementById('app_detail');

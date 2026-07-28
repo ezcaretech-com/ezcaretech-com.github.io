@@ -1,4 +1,8 @@
 .DS_Store
+
+# Claude Code 개인 설정 (로컬 경로가 들어가므로 공유하지 않음)
+.claude/
+
 scripts/config.json
 
 scripts/config_key.json

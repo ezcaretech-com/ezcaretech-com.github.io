@@ -261,7 +261,10 @@ showQRCode: function(url, platform) {
       correctLevel: QRCode.CorrectLevel.H
     });
   } else {
-    container.innerHTML = '<p class="text-red-500">QR 코드 생성 실패</p>';
+    console.error('[DownloadHandler] QRCode 라이브러리가 로드되지 않았습니다. /js/qrcode.min.js 를 확인하세요.');
+    container.innerHTML =
+      '<p class="text-red-500 text-sm font-medium">QR 코드를 만들 수 없습니다</p>' +
+      '<p class="text-slate-500 text-xs mt-1">QR 라이브러리를 불러오지 못했습니다.</p>';
   }
 
   // 모달 표시
