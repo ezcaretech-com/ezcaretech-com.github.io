@@ -1080,6 +1080,40 @@
       ]
     },
     {
+      "id": "mobile_emr_gbc_stg",
+      "name": "Mobile EMR for GBC Staging",
+      "isUse": true,
+      "iconUrl": "./apps/mobile-emr/gbc-stg/app-icon.png",
+      "indexImageUrl": "./apps/mobile-emr/gbc-stg/app-icon.png",
+      "summary": "Mobile EMR for GBC Staging",
+      "description": "Mobile EMR application for the GBC staging environment.",
+      "screenshots": [],
+      "downloads": [
+        {
+          "platform": "Android",
+          "version": "0.7.3",
+          "url": "https://github.com/ezcaretech-com/ezcaretech-com.github.io/releases/download/mobile-emr-gbc-stg-v0.7.3/app-gbcstaging-release.apk",
+          "isUse": true
+        },
+        {
+          "platform": "IOS",
+          "version": "0.7.3",
+          "url": "itms-services://?action=download-manifest&url=https://ezcaretech-com.github.io/apps/mobile-emr/gbc-stg/manifest.plist",
+          "isUse": true
+        }
+      ],
+      "histories": [
+        {
+          "version": "0.7.3",
+          "description": "GBC staging release. (Build 39)",
+          "minSdkVersion": "24",
+          "sdkVersion": "36",
+          "releaseDate": "2026-08-21",
+          "installUrl": ""
+        }
+      ]
+    },
+    {
       "id": "Nurse-AID_GBC",
       "name": "GBC CLMA Mobile Solution",
       "isUse": true,
