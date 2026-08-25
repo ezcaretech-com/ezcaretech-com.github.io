@@ -1175,7 +1175,7 @@
       ]
     },
     {
-      "id": "eConsent",
+      "id": "[KBC] eConsent",
       "name": "KBC eConsent Mobile Solution",
       "isUse": true,
       "iconUrl": "./images/eConsent_flutter/app_icon.png",
@@ -1215,6 +1215,51 @@
           "minSdkVersion": "",
           "sdkVersion": "",
           "releaseDate": "2026-01-27",
+          "installUrl": ""
+        }
+      ]
+    },
+    {
+      "id": "[GBC] eConsent",
+      "name": "GBC eConsent Mobile Solution",
+      "isUse": true,
+      "iconUrl": "./images/eConsent_flutter/app_icon.png",
+      "indexImageUrl": "./images/eConsent_flutter/app_icon.png",
+      "summary": "GBC eConsent Mobile Solution",
+      "description": "e-Consent system provides convenient functions for signing consents using desktop computers or tablet computers.\nVarious medical forms are displayed electronically and signature data are saved in electronic data as well.\nThis will reduce time in searching and getting medical forms, as well as increasing work efficiency.",
+      "screenshots": [
+        {
+          "url": "./images/eConsent_flutter/gbc/screenshot_0001.png",
+          "alt": "login"
+        },
+        {
+          "url": "./images/eConsent_flutter/gbc/screenshot_0002.png",
+          "alt": "Patient Search"
+        },
+        {
+          "url": "./images/eConsent_flutter/gbc/screenshot_0003.png",
+          "alt": "Consent Search"
+        },
+        {
+          "url": "./images/eConsent_flutter/gbc/screenshot_0004.png",
+          "alt": "Consent Write"
+        }
+      ],
+      "downloads": [
+        {
+          "platform": "Android",
+          "version": "3.5.0",
+          "url": "https://ezcaretech-com.github.io/apps/eConsent_flutter/app-gbcproduction-release.apk",
+          "isUse": true
+        }
+      ],
+      "histories": [
+        {
+          "version": "3.5.0",
+          "description": "GBC eConsent 최초 배포",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2026-08-25",
           "installUrl": ""
         }
       ]
