@@ -1184,37 +1184,37 @@
       "description": "e-Consent system provides convenient functions for signing consents using desktop computers or tablet computers.\nVarious medical forms are displayed electronically and signature data are saved in electronic data as well.\nThis will reduce time in searching and getting medical forms, as well as increasing work efficiency.",
       "screenshots": [
         {
-          "url": "./images/eConsent_flutter/screenshot_0001.png",
+          "url": "./images/eConsent_flutter/kbc/screenshot_0001.png",
           "alt": "login"
         },
         {
-          "url": "./images/eConsent_flutter/screenshot_0002.png",
+          "url": "./images/eConsent_flutter/kbc/screenshot_0002.png",
           "alt": "Patient Search"
         },
         {
-          "url": "./images/eConsent_flutter/screenshot_0003.png",
+          "url": "./images/eConsent_flutter/kbc/screenshot_0003.png",
           "alt": "Consent Search"
         },
         {
-          "url": "./images/eConsent_flutter/screenshot_0004.png",
+          "url": "./images/eConsent_flutter/kbc/screenshot_0004.png",
           "alt": "Consent Write"
         }
       ],
       "downloads": [
         {
           "platform": "Android",
-          "version": "1.0.59",
-          "url": "https://ezcaretech-com.github.io/apps/eConsent_flutter/eConsent.apk",
+          "version": "3.5.0",
+          "url": "https://ezcaretech-com.github.io/apps/eConsent_flutter/app-kbcproduction-release.apk",
           "isUse": true
         }
       ],
       "histories": [
         {
-          "version": "1.0.59",
-          "description": "KBC eConsent 최초 배포",
+          "version": "3.5.0",
+          "description": "KBC eConsent 업그레이드",
           "minSdkVersion": "",
           "sdkVersion": "",
-          "releaseDate": "2026-01-27",
+          "releaseDate": "2026-08-25",
           "installUrl": ""
         }
       ]
@@ -1256,7 +1256,7 @@
       "histories": [
         {
           "version": "3.5.0",
-          "description": "GBC eConsent 최초 배포",
+          "description": "GBC eConsent 업그레이드",
           "minSdkVersion": "",
           "sdkVersion": "",
           "releaseDate": "2026-08-25",
