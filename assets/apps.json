@@ -735,6 +735,14 @@
       ],
       "histories": [
         {
+          "version": "1.0.6",
+          "description": "Bug fixes and performance improvements for the staging environment (Build 76)",
+          "minSdkVersion": "",
+          "sdkVersion": "",
+          "releaseDate": "2026-08-31",
+          "installUrl": ""
+        },
+        {
           "version": "1.0.0",
           "description": "Bug fixes and performance improvements (Build 70)",
           "minSdkVersion": "",
