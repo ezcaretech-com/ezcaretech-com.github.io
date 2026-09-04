@@ -6,12 +6,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 APP_ID = "mobile_emr_gbc_stg"
-VERSION = "0.7.3"
+VERSION = "0.10.1"
 BUNDLE_ID = "com.ezcaretech.emr.gbc.staging"
 BASE_URL = "https://ezcaretech-com.github.io/apps/mobile-emr/gbc-stg"
 APK_URL = (
     "https://github.com/ezcaretech-com/ezcaretech-com.github.io/releases/download/"
-    "mobile-emr-gbc-stg-v0.7.3/app-gbcstaging-release.apk"
+    "mobile-emr-gbc-stg-v0.10.1/app-gbcstaging-release.apk"
 )
 
 

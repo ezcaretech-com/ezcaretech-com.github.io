@@ -19,7 +19,7 @@
         <key>bundle-identifier</key>
         <string>com.ezcaretech.emr.gbc.staging</string>
         <key>bundle-version</key>
-        <string>0.7.3</string>
+        <string>0.10.1</string>
         <key>kind</key>
         <string>software</string>
         <key>title</key>
