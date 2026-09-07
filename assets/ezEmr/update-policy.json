@@ -1,0 +1,24 @@
+{
+    "schemaVersion": 1,
+    "appId": "mobile_emr_gbc_stg",
+    "environment": "staging",
+    "updatedAt": "2026-09-07T12:44:47+0900",
+    "update": {
+        "enabled": true,
+        "defaultSoftReminderIntervalHours": 24,
+        "platforms": {
+            "Android": {
+                "latestVersion": "0.11.1",
+                "minSupportedVersion": "0.11.1",
+                "downloadUrl": "https://github.com/ezcaretech-com/ezcaretech-com.github.io/releases/download/mobile-emr-gbc-stg-v0.11.1/app-gbcstaging-release.apk",
+                "releaseNote": "인앱 자동 업데이트 추가 및 안정성 개선"
+            },
+            "iOS": {
+                "latestVersion": "0.11.1",
+                "minSupportedVersion": "0.11.1",
+                "downloadUrl": "itms-services://?action=download-manifest&url=https://ezcaretech-com.github.io/apps/mobile-emr/gbc-stg/manifest.plist",
+                "releaseNote": "인앱 자동 업데이트 추가 및 안정성 개선"
+            }
+        }
+    }
+}
