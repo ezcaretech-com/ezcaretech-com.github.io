@@ -1,5 +1,6 @@
 .DS_Store
 .worktrees/
+node_modules/
 
 # Claude Code 개인 설정 (로컬 경로가 들어가므로 공유하지 않음)
 .claude/
