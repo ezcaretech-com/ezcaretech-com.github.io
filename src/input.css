@@ -1,0 +1,5 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* iOS 12 호환을 위한 추가 스타일 (필요시) */
